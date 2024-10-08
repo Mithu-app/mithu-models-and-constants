@@ -14,5 +14,6 @@ const OTP_SENDER_PLATFORM = {
 }
 
 module.exports = {
-    OTP_PURPOSES
+    OTP_PURPOSES,
+    OTP_SENDER_PLATFORM
 }
