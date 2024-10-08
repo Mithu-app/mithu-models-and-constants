@@ -1,8 +1,8 @@
-import models from "./models"
-import constants from "./constants"
+import * as Models from "./models"
+import * as Constants from "./constants"
 
 
 module.exports = {
-    models,
-    constants
+    Models,
+    Constants
 }
