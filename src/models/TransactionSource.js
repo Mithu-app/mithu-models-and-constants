@@ -7,7 +7,7 @@ const {
     TRANSACTION_SOURCE_NAME,
     TRANSACTION_SOURCE_TYPE,
     TRANSACTION_TYPE
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

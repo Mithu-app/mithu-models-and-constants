@@ -6,7 +6,7 @@ const {
   TIMESTAMPS,
   TRANSACTION_SOURCE_TYPE,
   TRANSACTION_STATUS,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(

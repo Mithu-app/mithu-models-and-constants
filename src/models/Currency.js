@@ -5,7 +5,7 @@ const {
     COLLECTION,
     TIMESTAMPS,
     CURRENCY_KIND,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

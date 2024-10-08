@@ -1,7 +1,7 @@
 "use strict";
 
 const { Schema, model } = require("mongoose");
-const { COLLECTION, TIMESTAMPS, MODEL: NAME } = require("@src/constants");
+const { COLLECTION, TIMESTAMPS, MODEL: NAME } = require("../constants");
 
 
 const SCHEMA = new Schema(

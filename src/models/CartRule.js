@@ -7,7 +7,7 @@ const {
   CART_RULE_ACTION_TYPE,
   CART_RULE_TYPE,
   CART_RULE_SOURCE,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

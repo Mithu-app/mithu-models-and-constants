@@ -1,4 +1,4 @@
-const { MODEL: NAME, COLLECTION, TIMESTAMPS, } = require("@src/constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS, } = require("../constants");
 const { Schema, model, Types } = require("mongoose");
 
 

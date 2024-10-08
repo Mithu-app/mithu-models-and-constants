@@ -1,6 +1,6 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION,OTP_PURPOSES } = require("@src/constants");
+const { MODEL: NAME, COLLECTION,OTP_PURPOSES } = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

@@ -5,7 +5,7 @@ const {
   COLLECTION,
   TIMESTAMPS,
   ACTIVITY_ACTION_TYPE,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(

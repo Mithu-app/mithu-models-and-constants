@@ -1,6 +1,6 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION, TIMESTAMPS, NOTIFICATION_STATUS, NOTIFICATION_TYPES } = require("@src/constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS, NOTIFICATION_STATUS, NOTIFICATION_TYPES } = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(

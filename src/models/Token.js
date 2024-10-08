@@ -6,7 +6,7 @@ const {
   TIMESTAMPS,
   TOKEN_KIND,
   TOKEN_GTY,
-} = require("@src/constants");
+} = require("../constants");
 const { tokenKindToOIDCModel, tokenGtyToOIDCGrantType } = require("../utils");
 const { Schema, model, Types } = require("mongoose");
 

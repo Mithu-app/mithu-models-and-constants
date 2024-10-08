@@ -5,7 +5,7 @@ const {
     COLLECTION,
     TIMESTAMPS,
     VIBE_CATEGORY_SOURCE,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

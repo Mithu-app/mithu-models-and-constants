@@ -5,7 +5,7 @@ const {
     COLLECTION,
     TIMESTAMPS,
     MERCHANT_PRODUCT_STATUS
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------

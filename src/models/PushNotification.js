@@ -5,7 +5,7 @@ const {
     COLLECTION,
     TIMESTAMPS,
     PUSH_NOTIFICATION_PLATFORM,
-} = require("@src/constants");
+} = require("../constants");
 const { Schema, model } = require("mongoose");
 
 // ------------------------- Schema -----------------------------
