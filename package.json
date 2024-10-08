@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Mithu-app/mithu-models-and-constants/issues"
   },
-  "homepage": "https://github.com/Mithu-app/mithu-models-and-constants#readme"
+  "homepage": "https://github.com/Mithu-app/mithu-models-and-constants#readme",
+  "dependencies": {
+    "joi": "^17.13.3",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.7.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@src": "src"
+  }
 }

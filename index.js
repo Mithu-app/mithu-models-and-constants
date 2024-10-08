@@ -1,6 +1,6 @@
-import * as Models from "./models"
-import * as Constants from "./constants"
-
+require('module-alias/register')
+const Models = require('@src/models')
+const Constants = require('@src/constants')
 
 module.exports = {
     Models,
