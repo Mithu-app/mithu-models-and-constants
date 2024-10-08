@@ -7,6 +7,12 @@ const OTP_PURPOSES = {
     FORGOT_PASSWORD : "forgot-password"
 };
 
+const OTP_SENDER_PLATFORM = {
+    WHATSAPP : 'whatsapp',
+    TAQNYAT : 'taqnyat'
+
+}
+
 module.exports = {
     OTP_PURPOSES
 }
