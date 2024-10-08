@@ -4,7 +4,8 @@ const OTP_PURPOSES = {
     EMAIL_VERIFICATION: "email_verification",
     RESET_PASSWORD: "reset_password",
     REDEMPTION_CODE: "redemption_code",
-    FORGOT_PASSWORD : "forgot-password"
+    FORGOT_PASSWORD : "forgot-password",
+    LOGIN_WITH_VENDOR : "longin-with-vendor"
 };
 
 const OTP_SENDER_PLATFORM = {
