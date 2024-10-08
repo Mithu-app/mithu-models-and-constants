@@ -1,0 +1,9 @@
+const ACTIVITY_ACTION_TYPE = {
+  CREATE: "CREATE",
+  UPDATE: "UPDATE",
+  DELETE: "DELETE",
+};
+
+module.exports = {
+  ACTIVITY_ACTION_TYPE,
+};
