@@ -4,7 +4,7 @@ const ENV = {
   DEVELOPMENT: "development",
   PRODUCTION: "production",
   TEST: "test",
-  STAGING
+  STAGING : "staging"
 };
 
 const RELEASE = {
