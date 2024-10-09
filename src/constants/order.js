@@ -1,6 +1,7 @@
 const ORDER_PLATFORM_TYPE = {
     MITHU: 'mithu',
-    FOODICS: 'foodics'
+    FOODICS: 'foodics',
+    LAZYWAIT: 'lazywait'
 }
 
 module.exports = {
