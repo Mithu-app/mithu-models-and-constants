@@ -2,6 +2,9 @@
 
 const ERROR = {
   NOT_FOUND: "not-found",
+  CUSTOMER_NOT_FOUND: "customer-not-found",
+  CUSTOMER_ALREADY_EXIST: "customer-already-exist",
+  CUSTOMER_NOT_VERIFIED: "customer-not-verified",
   USER_NOT_FOUND: "user-not-found",
   USER_ALREADY_EXIST: "user-already-exist",
   USER_NOT_VERIFIED: "user-not-verified",
