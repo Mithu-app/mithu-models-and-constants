@@ -51,6 +51,7 @@ const MODEL = {
   HOLDING_SCHEMA: "HoldingSchema",
   SETTINGS: "Settings",
   ACTIVITY_LOG: "ActivityLog",
+  MESSAGE_LOG: "MessageLog",
 };
 
 const COLLECTION = {
@@ -103,6 +104,7 @@ const COLLECTION = {
   HOLDING_SCHEMA: "HoldingSchema",
   SETTINGS: "settings",
   ACTIVITY_LOG: "activity_log",
+  MESSAGE_LOG: "message_log",
 };
 
 const TIMESTAMPS = {

@@ -36,4 +36,5 @@ module.exports = {
   ...require("./holding_schema"),
   ...require("./activity_log"),
   ...require("./webhook"),
+  ...require("./message_log"),
 };
