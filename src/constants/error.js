@@ -2,9 +2,9 @@
 
 const ERROR = {
   NOT_FOUND: "not-found",
-  USER_NOT_FOUND: "customer-not-found",
-  USER_ALREADY_EXIST: "customer-already-exist",
-  USER_NOT_VERIFIED: "customer-not-verified",
+  USER_NOT_FOUND: "user-not-found",
+  USER_ALREADY_EXIST: "user-already-exist",
+  USER_NOT_VERIFIED: "user-not-verified",
   INSUFFICIENT_FUNDS: "insufficient-funds",
   UNAUTHORIZED: "unauthorized",
   ACCESS_TOKEN_MISSING: "access-token-missing",
@@ -18,6 +18,7 @@ const ERROR = {
   MISSING_ATTACHMENT: "missing-attachment",
   EXCEEDS_SIZE_LIMIT: "exceeds-size-limit",
   UNSUPPORTED_FORMAT: "unsupported-format",
+  UNSUPPORTED_BY_MITHU: "unsupported-by-mithu",
   COMPLETE_TWO_FACTOR_AUTHENTICATION_FIRST:
     "complete-two-factor-authentication-first",
   INVALID_TWO_FA_CODE: "invalid-two-fa-code",
