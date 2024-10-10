@@ -10,7 +10,7 @@ module.exports = {
   ...require("./s3"),
   ...require("./token"),
   ...require("./user"),
-  ...require("./customer.js"),
+  ...require("./customer"),
   ...require("./otpPurposes"),
   ...require("./currency.js"),
   ...require("./transaction_sources"),
@@ -29,10 +29,12 @@ module.exports = {
   ...require("./foodics"),
   ...require("./order"),
   ...require("./cartRule"),
+  ...require("./responses"),
+  ...require("./settings"),
   ...require("./vibeCategory"),
   ...require("./pushNotification"),
   ...require("./settings"),
   ...require("./holding_schema"),
   ...require("./activity_log"),
-  ...require('./webhook')
+  ...require("./webhook"),
 };
