@@ -8,16 +8,19 @@ const S3_ACL = {
 const S3_UPLOAD_FOLDER = {
   CATEGORY: "category",
   TICKET: "ticket",
-  MERCHANT_TAG: 'merchant-tag',
-  MERCHANT : 'merchant',
-  SLIDER : 'slider',
-  LANGUAGE : 'language',
-  CUSTOMER_CLASSIFICATION : 'customer-classification',
-  STORE_LOYALTY : 'store-loyalty',
-  MERCHANT_VIBES : 'merchant-vibes',
-  MERCHANT_PROMOTION_MESSAGE : 'merchant-promotion-message',
+  MERCHANT_TAG: "merchant-tag",
+  MERCHANT: "merchant",
+  SLIDER: "slider",
+  LANGUAGE: "language",
+  CUSTOMER_CLASSIFICATION: "customer-classification",
+  STORE_LOYALTY: "store-loyalty",
+  MERCHANT_VIBES: "merchant-vibes",
+  MERCHANT_PROMOTION_MESSAGE: "merchant-promotion-message",
+  RATING: "rating",
+  CUSTOMER: "customer",
+  MEMBERSHIP_CLAIM: "membership-claim",
+  FOODICS: "foodics",
 };
-
 
 const S3_MAX_IMAGE_SIZE = 3 * 1024 * 1024 + 1; // 3 megabytes
 
@@ -37,5 +40,5 @@ module.exports = {
   S3_UPLOAD_FOLDER,
   S3_MAX_IMAGE_SIZE,
   SUPPORTED_IMAGE_FORMATS,
-  MAX_FILE_SIZE_BYTES
+  MAX_FILE_SIZE_BYTES,
 };
