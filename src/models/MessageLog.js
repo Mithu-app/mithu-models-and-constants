@@ -24,7 +24,6 @@ const SCHEMA = new Schema(
     },
     user: {
       type: Schema.Types.ObjectId,
-      ref: NAME.USER,
     },
     url: {
       type: String,
