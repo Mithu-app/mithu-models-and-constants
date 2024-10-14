@@ -6,6 +6,7 @@ const {
   TIMESTAMPS,
   HTTP_VERBS,
   LOG_TYPE,
+  LOG_PLATFORM,
 } = require("../constants");
 const { Schema, model } = require("mongoose");
 
@@ -32,6 +33,11 @@ const SCHEMA = new Schema(
       type: String,
       enum: Object.values(HTTP_VERBS),
     },
+    platform: {
+      type: String,
+      enum: Object.values(LOG_PLATFORM),
+      required: true,
+    },
   },
   {
     collection: COLLECTION.MESSAGE_LOG,
@@ -42,7 +48,17 @@ const SCHEMA = new Schema(
 // Static methods
 SCHEMA.statics = {
   serialize(log) {
-    const { _id, type, title, detail, user, url, url_type, createdAt } = log;
+    const {
+      _id,
+      type,
+      title,
+      detail,
+      user,
+      url,
+      url_type,
+      platform,
+      createdAt,
+    } = log;
     return {
       id: _id,
       type,
@@ -51,6 +67,7 @@ SCHEMA.statics = {
       user,
       url,
       url_type,
+      platform,
       timestamp: createdAt,
     };
   },
@@ -63,6 +80,7 @@ SCHEMA.statics = {
       "user",
       "url",
       "url_type",
+      "platform",
       "createdAt",
     ];
   },
