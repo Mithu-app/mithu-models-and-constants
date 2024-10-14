@@ -13,12 +13,15 @@ const SCHEMA = new Schema(
         merchantId: {
             type: Schema.Types.ObjectId,
             ref: NAME.MERCHANT,
-            required: true
+        },
+        brandId: {
+            type: Schema.Types.ObjectId,
+            ref: NAME.BRAND,
         },
         balance: {
             type: Number,
             required: true,
-            default : 0
+            default: 0
         }
     },
     {
@@ -29,12 +32,13 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
     serialize(customerBalance) {
-        const { _id, customerId, merchantId, balance } = customerBalance;
+        const { _id, customerId, merchantId, brandId, balance } = customerBalance;
 
         return {
             id: _id,
             customerId,
             merchantId,
+            brandId,
             balance
         };
     },
@@ -43,6 +47,7 @@ SCHEMA.static({
             "_id",
             "customerId",
             "merchantId",
+            "brandId",
             "balance"
         ];
     },
