@@ -21,7 +21,7 @@ const SCHEMA = new Schema(
       type: String,
     },
     detail: {
-      type: [Schema.Types.Mixed],
+      type: Schema.Types.Mixed,
     },
     user: {
       type: Schema.Types.ObjectId,
