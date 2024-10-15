@@ -52,6 +52,7 @@ const MODEL = {
   SETTINGS: "Settings",
   ACTIVITY_LOG: "ActivityLog",
   MESSAGE_LOG: "MessageLog",
+  USER_SESSION: "UserSession",
 };
 
 const COLLECTION = {
@@ -105,6 +106,7 @@ const COLLECTION = {
   SETTINGS: "settings",
   ACTIVITY_LOG: "activity_log",
   MESSAGE_LOG: "message_log",
+  USER_SESSION: "user_session",
 };
 
 const TIMESTAMPS = {

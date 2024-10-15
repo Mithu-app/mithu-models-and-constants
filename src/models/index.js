@@ -49,3 +49,4 @@ exports.WebhookDump = require("./WebhookDump");
 exports.HoldingSchema = require("./HoldingSchema");
 exports.ActivityLog = require("./ActivityLog");
 exports.MessageLog = require("./MessageLog");
+exports.userSession = require("./userSession");
