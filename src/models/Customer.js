@@ -124,7 +124,6 @@ const SCHEMA = new Schema(
   },
 );
 
-SCHEMA.index({ "phone_number.code": 1, "phone_number.number": 1 }, { unique: true });
 
 SCHEMA.static({
   serialize(customer) {
