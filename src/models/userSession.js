@@ -5,6 +5,7 @@ const {
   COLLECTION,
   TIMESTAMPS,
   USER_SESSION_STATUS,
+  LOG_PLATFORM,
 } = require("../constants");
 const { Schema, model } = require("mongoose");
 
@@ -37,7 +38,7 @@ const SCHEMA = new Schema(
     },
     platform: {
       type: String,
-      enum: Object.values(USER_SESSION_STATUS),
+      enum: Object.values(LOG_PLATFORM),
       required: true,
     },
   },
