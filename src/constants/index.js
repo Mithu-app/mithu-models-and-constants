@@ -37,4 +37,5 @@ module.exports = {
   ...require("./activity_log"),
   ...require("./webhook"),
   ...require("./message_log"),
+  ...require("./userSession"),
 };
