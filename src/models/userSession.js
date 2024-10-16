@@ -28,6 +28,9 @@ const SCHEMA = new Schema(
     browser: {
       type: String,
     },
+    device: {
+      type: String,
+    },
     status: {
       type: String,
       enum: Object.values(USER_SESSION_STATUS),
