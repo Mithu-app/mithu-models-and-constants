@@ -1,7 +1,7 @@
 const USER_SESSION_STATUS = {
-  LOGGED_IN: "LOGGED_IN",
-  LOGGED_OUT: "LOGGED_OUT",
-  BANNED: "BANNED",
+  ACTIVE: "Active",
+  UN_ACTIVE: "Un-Active",
+  BANNED: "Banned",
 };
 
 module.exports = {
