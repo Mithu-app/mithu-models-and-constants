@@ -53,6 +53,7 @@ const MODEL = {
   ACTIVITY_LOG: "ActivityLog",
   MESSAGE_LOG: "MessageLog",
   USER_SESSION: "UserSession",
+  DEVICE: "Device",
 };
 
 const COLLECTION = {
@@ -107,6 +108,7 @@ const COLLECTION = {
   ACTIVITY_LOG: "activity_log",
   MESSAGE_LOG: "message_log",
   USER_SESSION: "user_session",
+  DEVICE: "device",
 };
 
 const TIMESTAMPS = {
