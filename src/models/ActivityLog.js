@@ -53,7 +53,8 @@ SCHEMA.statics = {
       new_doc,
       updated_by,
       action,
-      createdAt,
+      created_at,
+      updated_at,
     } = log;
     return {
       id: _id,
@@ -63,7 +64,8 @@ SCHEMA.statics = {
       new_doc,
       updated_by,
       action,
-      timestamp: createdAt,
+      created_at,
+      updated_at,
     };
   },
   getSelectableFields() {
@@ -75,7 +77,8 @@ SCHEMA.statics = {
       "new_doc",
       "updated_by",
       "action",
-      "createdAt",
+      "created_at",
+      "updated_at",
     ];
   },
 };

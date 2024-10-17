@@ -65,7 +65,8 @@ SCHEMA.statics = {
       status,
       last_active,
       platform,
-      createdAt,
+      created_at,
+      updated_at,
     } = log;
     return {
       id: _id,
@@ -78,7 +79,8 @@ SCHEMA.statics = {
       status,
       last_active,
       platform,
-      timestamp: createdAt,
+      created_at,
+      updated_at,
     };
   },
   getSelectableFields() {
@@ -93,7 +95,8 @@ SCHEMA.statics = {
       "status",
       "last_active",
       "platform",
-      "createdAt",
+      "created_at",
+      "updated_at",
     ];
   },
 };

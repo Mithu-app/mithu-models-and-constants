@@ -48,7 +48,8 @@ SCHEMA.statics = {
       device_id,
       pin,
       device_token,
-      createdAt,
+      created_at,
+      updated_at,
     } = log;
     return {
       id: _id,
@@ -58,7 +59,8 @@ SCHEMA.statics = {
       device_id,
       pin,
       device_token,
-      timestamp: createdAt,
+      created_at,
+      updated_at,
     };
   },
   getSelectableFields() {
@@ -70,7 +72,8 @@ SCHEMA.statics = {
       "device_id",
       "pin",
       "device_token",
-      "createdAt",
+      "created_at",
+      "updated_at",
     ];
   },
 };

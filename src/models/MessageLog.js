@@ -57,7 +57,8 @@ SCHEMA.statics = {
       url,
       url_type,
       platform,
-      createdAt,
+      created_at,
+      updated_at,
     } = log;
     return {
       id: _id,
@@ -68,7 +69,8 @@ SCHEMA.statics = {
       url,
       url_type,
       platform,
-      timestamp: createdAt,
+      created_at,
+      updated_at,
     };
   },
   getSelectableFields() {
@@ -81,7 +83,8 @@ SCHEMA.statics = {
       "url",
       "url_type",
       "platform",
-      "createdAt",
+      "created_at",
+      "updated_at",
     ];
   },
 };
