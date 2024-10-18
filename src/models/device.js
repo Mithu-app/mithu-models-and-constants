@@ -30,6 +30,21 @@ const SCHEMA = new Schema(
     device_token: {
       type: String,
     },
+    created_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    updated_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    deleted_at: {
+      type: Date,
+    },
+    deleted_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
   },
   {
     collection: COLLECTION.DEVICE,
@@ -50,6 +65,7 @@ SCHEMA.statics = {
       device_token,
       created_at,
       updated_at,
+      created_by,
     } = log;
     return {
       id: _id,
@@ -61,6 +77,7 @@ SCHEMA.statics = {
       device_token,
       created_at,
       updated_at,
+      created_by,
     };
   },
   getSelectableFields() {
@@ -74,6 +91,7 @@ SCHEMA.statics = {
       "device_token",
       "created_at",
       "updated_at",
+      "created_by",
     ];
   },
 };
