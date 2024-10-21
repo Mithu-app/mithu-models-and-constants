@@ -50,4 +50,4 @@ exports.HoldingSchema = require("./HoldingSchema");
 exports.ActivityLog = require("./ActivityLog");
 exports.MessageLog = require("./MessageLog");
 exports.UserSession = require("./userSession");
-exports.Device = require("./Device");
+exports.Device = require("./device");
