@@ -21,7 +21,7 @@ const SCHEMA = new Schema(
         },
         allow_redeem: {
             type: Boolean,
-            default : true
+            default : false
         },
         deleted_at: {
             type: Date
