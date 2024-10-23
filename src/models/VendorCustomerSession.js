@@ -17,7 +17,8 @@ const SCHEMA = new Schema(
         },
         status: {
             type: String,
-            enum: Object.values(VENDOR_CUSTOMER_SESSION_STATUS)
+            enum: Object.values(VENDOR_CUSTOMER_SESSION_STATUS),
+            default : VENDOR_CUSTOMER_SESSION_STATUS.ACTIVE
         },
         allow_redeem: {
             type: Boolean,
