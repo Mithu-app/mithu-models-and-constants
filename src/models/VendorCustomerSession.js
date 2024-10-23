@@ -20,7 +20,8 @@ const SCHEMA = new Schema(
             enum: Object.values(VENDOR_CUSTOMER_SESSION_STATUS)
         },
         allow_redeem: {
-            type: String,
+            type: Boolean,
+            default : true
         },
         deleted_at: {
             type: Date
