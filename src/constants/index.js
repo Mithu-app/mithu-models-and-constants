@@ -38,4 +38,5 @@ module.exports = {
   ...require("./webhook"),
   ...require("./message_log"),
   ...require("./userSession"),
+  ...require('./vendor')
 };

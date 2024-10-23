@@ -54,6 +54,7 @@ const MODEL = {
   MESSAGE_LOG: "MessageLog",
   USER_SESSION: "UserSession",
   DEVICE: "Device",
+  VENDOR_CUSTOMER_SESSION : 'VendorCustomerSession' 
 };
 
 const COLLECTION = {
@@ -109,6 +110,7 @@ const COLLECTION = {
   MESSAGE_LOG: "message_log",
   USER_SESSION: "user_session",
   DEVICE: "device",
+  VENDOR_CUSTOMER_SESSION : "vendor_customer_session"
 };
 
 const TIMESTAMPS = {
