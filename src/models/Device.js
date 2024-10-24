@@ -29,7 +29,8 @@ const SCHEMA = new Schema(
     },
     enable: {
       type: Boolean,
-      required: true,
+      required: false,
+      default: true,
     },
     device_token: {
       type: String,
