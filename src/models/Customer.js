@@ -3,20 +3,21 @@
 const { MODEL: NAME, COLLECTION, TIMESTAMPS, CUSTOMER_GENDER, CUSTOMER_STATUS} = require("../constants");
 const { string } = require("joi");
 const { Schema, model } = require("mongoose");
+const { emitEvent } = require("../../socket");
 
 const SCHEMA = new Schema(
   {
     email: {
       type: String,
     },
-    
+
     default_language: {
       type: Schema.Types.ObjectId,
       // default : //add function to make english as default
     },
     referral_code: {
       type: String,
-      unique: true
+      unique: true,
     },
     referred_code: {
       type: String,
@@ -26,11 +27,11 @@ const SCHEMA = new Schema(
     },
     secret: {
       type: String,
-      required: true
+      required: true,
     },
     twoFA_enabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     name: {
       type: String,
@@ -47,7 +48,7 @@ const SCHEMA = new Schema(
       },
       year: {
         type: Number,
-      }
+      },
     },
     gender: {
       type: String,
@@ -66,8 +67,8 @@ const SCHEMA = new Schema(
       },
       number: {
         type: String,
-        required: true
-      }
+        required: true,
+      },
     },
     phone_number_verified_at: {
       type: Date,
@@ -80,49 +81,54 @@ const SCHEMA = new Schema(
     },
     isAdmin: {
       type: Boolean,
-      default: false
+      default: false,
     },
     terms_and_conditions_consent: {
       type: Boolean,
-      default: false
+      default: false,
     },
-    device_token :{
-      type : String
+    device_token: {
+      type: String,
     },
     privacy_policy_consent: {
       type: Boolean,
-      default: false
+      default: false,
     },
     deleted_at: {
-      type: Date
+      type: Date,
     },
     // New fields
     channel: {
       type: String,
-      enum: ['android', 'iphone', 'desktop']
+      enum: ["android", "iphone", "desktop"],
     },
     customer_type: {
       type: Schema.Types.ObjectId,
-      ref: NAME.CUSTOMER_TYPES // Assuming there's a model named CustomerType
+      ref: NAME.CUSTOMER_TYPES, // Assuming there's a model named CustomerType
     },
     disable_nft: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disable_earning: {
       type: Boolean,
-      default: false
+      default: false,
     },
     disable_redemption: {
       type: Boolean,
-      default: false
-    } 
+      default: false,
+    },
   },
   {
     collection: COLLECTION.CUSTOMER,
     timestamps: TIMESTAMPS,
-  },
+  }
 );
+
+SCHEMA.post("save", (doc, next) => {
+  emitEvent("customer_registered", doc);
+  next();
+});
 
 
 SCHEMA.static({

@@ -7,6 +7,7 @@ const {
   MERCHANT_STATUS,
   MERCHANT_TYPE,
 } = require("../constants");
+const { emitEvent } = require("../../socket");
 
 const { Schema, model } = require("mongoose");
 
@@ -21,10 +22,10 @@ const SCHEMA = new Schema(
       ref: NAME.BRAND,
     },
     facilities: {
-      type: []
+      type: [],
     },
     short_description: {
-      type: String
+      type: String,
     },
     address: {
       type: String,
@@ -231,7 +232,7 @@ const SCHEMA = new Schema(
     },
     is_published: {
       type: Boolean,
-      default: true
+      default: true,
     },
     created_by: {
       type: Schema.Types.ObjectId,
@@ -254,6 +255,11 @@ const SCHEMA = new Schema(
     timestamps: TIMESTAMPS,
   }
 );
+
+SCHEMA.post("save", (doc, next) => {
+  emitEvent("merchant_added", doc);
+  next();
+});
 
 SCHEMA.statics = {
   serialize(merchant) {
