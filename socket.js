@@ -2,6 +2,7 @@ let socket = null;
 
 const initializeMithuPackageSocket = (socketInstance) => {
   socket = socketInstance;
+  console.log("Mithu package Socket initialized!");
 };
 
 const emitEvent = (event, data) => {
