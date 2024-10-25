@@ -2,67 +2,73 @@
 
 const { MODEL: NAME, COLLECTION, TIMESTAMPS, MINTING_STATUS } = require("../constants");
 const { Schema, model } = require("mongoose");
+const { emitEvent } = require("../../socket");
 
 const SCHEMA = new Schema(
-    {
-        name: {
-            type: String,
-        },
-        card_number: {
-            type: String,
-
-            unique: true
-        },
-        symbol: {
-            type: String,
-        },
-        token_uri: {
-            type: String,
-        },
-        contract_address: {
-            type: String,
-        },
-        owner_address: {
-            type: String,
-        },
-        tx_ids: {
-            type: [String],
-        },
-        fee: {
-            type: String,
-        },
-        minted_address: {
-            type: String,
-        },
-        nft_id: {
-            type: String,
-        },
-        customer_id: {
-            type: Schema.Types.ObjectId,
-            ref: NAME.CUSTOMER,
-        },
-        merchant_id: {
-            type: Schema.Types.ObjectId,
-            ref: NAME.MERCHANT,
-        },
-        storeLoyalty_id: {
-            type: Schema.Types.ObjectId,
-            ref: NAME.STORE_LOYALTY,
-        },
-        status: {
-            type: String,
-            enum: Object.values(MINTING_STATUS),
-            default: MINTING_STATUS.PENDING
-        },
-        scheduled_time: {
-            type: Date
-        }
+  {
+    name: {
+      type: String,
     },
-    {
-        collection: COLLECTION.MEMBERSHIP_CLAIM,
-        timestamps: TIMESTAMPS,
-    }
+    card_number: {
+      type: String,
+
+      unique: true,
+    },
+    symbol: {
+      type: String,
+    },
+    token_uri: {
+      type: String,
+    },
+    contract_address: {
+      type: String,
+    },
+    owner_address: {
+      type: String,
+    },
+    tx_ids: {
+      type: [String],
+    },
+    fee: {
+      type: String,
+    },
+    minted_address: {
+      type: String,
+    },
+    nft_id: {
+      type: String,
+    },
+    customer_id: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.CUSTOMER,
+    },
+    merchant_id: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.MERCHANT,
+    },
+    storeLoyalty_id: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.STORE_LOYALTY,
+    },
+    status: {
+      type: String,
+      enum: Object.values(MINTING_STATUS),
+      default: MINTING_STATUS.PENDING,
+    },
+    scheduled_time: {
+      type: Date,
+    },
+  },
+  {
+    collection: COLLECTION.MEMBERSHIP_CLAIM,
+    timestamps: TIMESTAMPS,
+  }
 );
+
+SCHEMA.post("save", (doc, next) => {
+  emitEvent("membership_claimed", doc);
+  next();
+});
 
 SCHEMA.statics = {
     serialize(membership_claim) {

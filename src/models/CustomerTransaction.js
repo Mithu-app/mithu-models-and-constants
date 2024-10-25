@@ -8,6 +8,7 @@ const {
   TRANSACTION_STATUS,
 } = require("../constants");
 const { Schema, model } = require("mongoose");
+const { emitEvent } = require("../../socket");
 
 const SCHEMA = new Schema(
   {
@@ -52,6 +53,11 @@ const SCHEMA = new Schema(
     timestamps: TIMESTAMPS,
   }
 );
+
+SCHEMA.post("save", (doc, next) => {
+  emitEvent("transaction_processed", doc);
+  next();
+});
 
 SCHEMA.statics = {
     serialize(transaction) {
