@@ -33,10 +33,9 @@ module.exports = {
   ...require("./settings"),
   ...require("./vibeCategory"),
   ...require("./pushNotification"),
-  ...require("./holding_schema"),
   ...require("./activity_log"),
   ...require("./webhook"),
   ...require("./message_log"),
   ...require("./userSession"),
-  ...require('./vendor')
+  ...require("./vendor"),
 };
