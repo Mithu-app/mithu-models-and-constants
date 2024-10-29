@@ -46,7 +46,6 @@ exports.VibeCategory = require("./VibeCategory");
 exports.PushNotification = require("./PushNotification");
 exports.Settings = require("./Settings");
 exports.WebhookDump = require("./WebhookDump");
-exports.HoldingSchema = require("./HoldingSchema");
 exports.ActivityLog = require("./ActivityLog");
 exports.MessageLog = require("./MessageLog");
 exports.UserSession = require("./UserSession");
