@@ -6,6 +6,7 @@ const {
   TIMESTAMPS,
   MERCHANT_STATUS,
   MERCHANT_TYPE,
+  ORDER_PLATFORM_TYPE
 } = require("../constants");
 const { emitEvent } = require("../../socket");
 
@@ -80,6 +81,11 @@ const SCHEMA = new Schema(
         message: (props) =>
           `${props.value} is not a valid unique code. It must be exactly 6 characters long.`,
       },
+    },
+    platform : {
+      type : String,
+      enum : Object.values(ORDER_PLATFORM_TYPE),
+
     },
     password: {
       type: String,
@@ -270,6 +276,7 @@ SCHEMA.statics = {
       address,
       short_description,
       facilities,
+      platform,
       is_most_loved,
       description,
       delivery_time,
@@ -307,6 +314,7 @@ SCHEMA.statics = {
       name,
       brand_id,
       address,
+      platform,
       short_description,
       facilities,
       is_most_loved,
@@ -348,6 +356,7 @@ SCHEMA.statics = {
       "name",
       "brand_id",
       "address",
+      "platform",
       "short_description",
       "facilities",
       "is_most_loved",
