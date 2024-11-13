@@ -20,6 +20,8 @@ const S3_UPLOAD_FOLDER = {
   CUSTOMER: "customer",
   MEMBERSHIP_CLAIM: "membership-claim",
   FOODICS: "foodics",
+  STORE_CATEGORY: "store-category",
+  STORE: "store",
 };
 
 const S3_MAX_IMAGE_SIZE = 3 * 1024 * 1024 + 1; // 3 megabytes
