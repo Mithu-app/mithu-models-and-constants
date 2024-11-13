@@ -51,3 +51,5 @@ exports.MessageLog = require("./MessageLog");
 exports.UserSession = require("./UserSession");
 exports.Device = require("./Device");
 exports.VendorCustomerSession = require("./VendorCustomerSession");
+exports.StoreCategory = require("./StoreCategory");
+exports.Store = require("./Store");

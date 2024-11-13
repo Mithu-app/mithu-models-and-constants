@@ -38,4 +38,6 @@ module.exports = {
   ...require("./message_log"),
   ...require("./userSession"),
   ...require("./vendor"),
+  ...require("./storeCategory"),
+  ...require("./store"),
 };
