@@ -1,11 +1,6 @@
 "use strict";
 
-const {
-  MODEL: NAME,
-  COLLECTION,
-  TIMESTAMPS,
-  STORE_CATEGORY_STATUS,
-} = require("../constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS } = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(
@@ -55,10 +50,18 @@ const SCHEMA = new Schema(
       ],
       required: true,
     },
-    category_status: {
-      type: String,
-      enum: Object.values(STORE_CATEGORY_STATUS),
-      default: STORE_CATEGORY_STATUS.ACTIVE,
+    categories: {
+      type: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: NAME.STORE_CATEGORY,
+        },
+      ],
+      required: true,
+      validate: {
+        validator: (value) => Array.isArray(value) && value.length > 0,
+        message: "The 'categories' array must not be empty.",
+      },
     },
     display_order: {
       type: Number,
@@ -88,7 +91,7 @@ const SCHEMA = new Schema(
 
 // Static methods
 SCHEMA.statics = {
-  serialize(category) {
+  serialize(store) {
     const {
       _id,
       name,
@@ -97,10 +100,12 @@ SCHEMA.statics = {
       store_cashback_percentage,
       app_cashback_percentage,
       rates,
-      category_status,
+      categories,
       display_order,
       created_by,
-    } = category;
+      deleted_at,
+      deleted_by,
+    } = store;
     return {
       id: _id,
       name,
@@ -109,9 +114,11 @@ SCHEMA.statics = {
       store_cashback_percentage,
       app_cashback_percentage,
       rates,
+      categories,
       display_order,
-      category_status,
       created_by,
+      deleted_at,
+      deleted_by,
     };
   },
   getSelectableFields() {
@@ -123,9 +130,11 @@ SCHEMA.statics = {
       "store_cashback_percentage",
       "app_cashback_percentage",
       "rates",
+      "categories",
       "display_order",
-      "category_status",
       "created_by",
+      "deleted_at",
+      "deleted_by",
     ];
   },
 };
