@@ -17,6 +17,13 @@ const SCHEMA = new Schema(
         saved_at: {
             type: Date,
             default: Date.now(),
+        },
+        deleted_at :{
+            type : Date
+        },
+        is_expired :{
+            type : Boolean,
+            default : false
         }
     },
     {
@@ -27,7 +34,7 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
     serialize(savedStore) {
-        const { _id, customer_id, store_id, saved_at, created_at, updated_at } = savedStore;
+        const { _id, customer_id, store_id, saved_at, created_at, updated_at,deleted_at,is_expired } = savedStore;
 
         return {
             id: _id,
@@ -35,7 +42,9 @@ SCHEMA.static({
             store_id,
             saved_at,
             created_at,
-            updated_at
+            updated_at,
+            deleted_at,
+            is_expired
         };
     },
     getSelectableFields() {
@@ -45,7 +54,9 @@ SCHEMA.static({
             "store_id",
             "saved_at",
             "created_at",
-            "updated_at"
+            "updated_at",
+            "deleted_at",
+            "is_expired"
         ];
     },
 });
