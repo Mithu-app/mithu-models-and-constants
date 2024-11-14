@@ -14,10 +14,7 @@ const SCHEMA = new Schema(
       type: String,
       required: true,
     },
-    image: {
-      type: String,
-    },
-    category_status: {
+    tag_status: {
       type: String,
       enum: Object.values(STORE_TAG_STATUS),
       default: STORE_TAG_STATUS.ACTIVE,
@@ -50,26 +47,17 @@ const SCHEMA = new Schema(
 
 SCHEMA.statics = {
   serialize(category) {
-    const { _id, name, image, category_status, display_order, created_by } =
-      category;
+    const { _id, name, tag_status, display_order, created_by } = category;
     return {
       id: _id,
       name,
-      image,
       display_order,
-      category_status,
+      tag_status,
       created_by,
     };
   },
   getSelectableFields() {
-    return [
-      "_id",
-      "name",
-      "image",
-      "display_order",
-      "category_status",
-      "created_by",
-    ];
+    return ["_id", "name", "display_order", "tag_status", "created_by"];
   },
 };
 
