@@ -58,6 +58,7 @@ const MODEL = {
   STORE_CATEGORY: "StoreCategory",
   STORE: "Store",
   STORE_TAG: "StoreTag",
+  SAVED_STORE: "SavedStore"
 };
 
 const COLLECTION = {
@@ -117,6 +118,7 @@ const COLLECTION = {
   STORE_CATEGORY: "store_category",
   STORE: "store",
   STORE_TAG: "store_tag",
+  SAVED_STORE: "saved_store"
 };
 
 const TIMESTAMPS = {
