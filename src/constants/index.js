@@ -40,4 +40,5 @@ module.exports = {
   ...require("./vendor"),
   ...require("./storeCategory"),
   ...require("./store"),
+  ...require("./storeTag"),
 };

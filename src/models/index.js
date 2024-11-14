@@ -53,3 +53,4 @@ exports.Device = require("./Device");
 exports.VendorCustomerSession = require("./VendorCustomerSession");
 exports.StoreCategory = require("./StoreCategory");
 exports.Store = require("./Store");
+exports.StoreTag = require("./StoreTag");
