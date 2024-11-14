@@ -85,7 +85,7 @@ const SCHEMA = new Schema(
       required: true,
     },
     save_time: {
-      type: String,
+      type: Number,
       required: true,
     },
     display_order: {
