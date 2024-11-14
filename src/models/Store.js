@@ -34,19 +34,22 @@ const SCHEMA = new Schema(
     },
     rates: {
       type: [
-        {
-          name: {
-            type: String,
-            required: true,
-            trim: true,
+        new Schema(
+          {
+            name: {
+              type: String,
+              required: true,
+              trim: true,
+            },
+            cashback_percentage: {
+              type: Number,
+              required: true,
+              min: 0,
+              max: 100,
+            },
           },
-          cashback_percentage: {
-            type: Number,
-            required: true,
-            min: 0,
-            max: 100,
-          },
-        },
+          { _id: false }
+        ),
       ],
       required: true,
     },
