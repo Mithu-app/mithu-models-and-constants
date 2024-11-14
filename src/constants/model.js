@@ -57,6 +57,7 @@ const MODEL = {
   VENDOR_CUSTOMER_SESSION: "VendorCustomerSession",
   STORE_CATEGORY: "StoreCategory",
   STORE: "Store",
+  STORE_TAG: "StoreTag",
 };
 
 const COLLECTION = {
@@ -115,6 +116,7 @@ const COLLECTION = {
   VENDOR_CUSTOMER_SESSION: "vendor_customer_session",
   STORE_CATEGORY: "store_category",
   STORE: "store",
+  STORE_TAG: "store_tag",
 };
 
 const TIMESTAMPS = {
