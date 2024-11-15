@@ -1,6 +1,13 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION, TIMESTAMPS, CUSTOMER_GENDER, CUSTOMER_STATUS} = require("../constants");
+const {
+  MODEL: NAME,
+  COLLECTION,
+  TIMESTAMPS,
+  CUSTOMER_GENDER,
+  CUSTOMER_STATUS,
+  CURRENCY_KIND,
+} = require("../constants");
 const { string } = require("joi");
 const { Schema, model } = require("mongoose");
 const { emitEvent } = require("../../socket");
@@ -10,10 +17,18 @@ const SCHEMA = new Schema(
     email: {
       type: String,
     },
-
     default_language: {
       type: Schema.Types.ObjectId,
       // default : //add function to make english as default
+    },
+    default_currency: {
+      type: Schema.Types.ObjectId,
+      // default : //add function to make SAR as default
+    },
+    currency_type: {
+      type: String,
+      enum: Object.values(CURRENCY_KIND),
+      required: false,
     },
     referral_code: {
       type: String,
@@ -130,7 +145,6 @@ SCHEMA.post("save", (doc, next) => {
   next();
 });
 
-
 SCHEMA.static({
   serialize(customer) {
     const {
@@ -138,6 +152,8 @@ SCHEMA.static({
       email,
       name,
       default_language,
+      default_currency,
+      currency_type,
       disable_nft,
       disable_earning,
       disable_redemption,
@@ -159,7 +175,7 @@ SCHEMA.static({
       updated_at,
       deleted_at,
       channel,
-      customer_type
+      customer_type,
     } = customer;
 
     const serialized = {
@@ -168,7 +184,9 @@ SCHEMA.static({
 
     serialized.email = email;
     serialized.email_verified = email_verified_at != null;
-    serialized.default_language = default_language
+    serialized.default_language = default_language;
+    serialized.default_currency = default_currency;
+    serialized.currency_type = currency_type;
 
     if (name != null) serialized.name = name;
     if (date_of_birth != null) serialized.date_of_birth = date_of_birth;
@@ -176,9 +194,11 @@ SCHEMA.static({
     if (profile_pic != null) serialized.profile_pic = profile_pic;
     if (country != null) serialized.country = country;
     if (language != null) serialized.language = language;
-    if (!privacy_policy_consent) serialized.privacy_policy_consent = privacy_policy_consent
-    if (!terms_and_conditions_consent) serialized.terms_and_conditions_consent = terms_and_conditions_consent
-    if(device_token != null) serialized.device_token = device_token
+    if (!privacy_policy_consent)
+      serialized.privacy_policy_consent = privacy_policy_consent;
+    if (!terms_and_conditions_consent)
+      serialized.terms_and_conditions_consent = terms_and_conditions_consent;
+    if (device_token != null) serialized.device_token = device_token;
 
     serialized.phone_number = phone_number;
     serialized.phone_number_verified = phone_number_verified_at != null;
@@ -202,6 +222,8 @@ SCHEMA.static({
       "email",
       "name",
       "default_language",
+      "default_currency",
+      "currency_type",
       "referral_code",
       "referred_code",
       "disable_nft",
