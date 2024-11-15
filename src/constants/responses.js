@@ -3,6 +3,7 @@
 const RESPONSE_ACTION = {
   ACCOUNT_DELETED: "accountDelete",
   PROFILE_UPDATED: "profileUpdate",
+  DEFAULT_CURRENCY_UPDATED: "defaultCurrencyUpdate",
   NFT_MINTED: "nftMint",
   TICKET_CREATED_SUCCESSFULLY: "ticketCreatedSuccessfully",
   COULD_NOT_CREATE_QRCODE: "couldNotCreateQrcode",
@@ -17,6 +18,7 @@ const RESPONSE_ACTION = {
 const ARABIC_RESPONSES = {
   CUSTOMER_DELETED: "تم حذف العميل",
   PROFILE_UPDATED: "تم تحديث الملف الشخصي",
+  DEFAULT_CURRENCY_UPDATED: "تم تحديث العملة",
   NFT_MINTED: "تم سك NFT",
   TICKET_CREATED_SUCCESSFULLY: "تم إنشاء التذكرة بنجاح",
   COULD_NOT_CREATE_QRCODE: "لا يمكن إنشاء رمز الاستجابة السريعة",
