@@ -5,6 +5,11 @@ const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(
   {
+    program_id: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     name: {
       type: String,
       required: true,
@@ -40,12 +45,22 @@ const SCHEMA = new Schema(
     rates: {
       type: [
         {
+          rate_id: {
+            type: String,
+            required: true,
+          },
           name: {
             type: String,
             required: true,
             trim: true,
           },
-          cashback_percentage: {
+          store_cashback_percentage: {
+            type: Number,
+            required: true,
+            min: 0,
+            max: 100,
+          },
+          app_cashback_percentage: {
             type: Number,
             required: true,
             min: 0,
@@ -124,6 +139,7 @@ SCHEMA.statics = {
   serialize(store) {
     const {
       _id,
+      program_id,
       name,
       logo,
       banner,
@@ -144,6 +160,7 @@ SCHEMA.statics = {
     } = store;
     return {
       id: _id,
+      program_id,
       name,
       logo,
       banner,
@@ -166,6 +183,7 @@ SCHEMA.statics = {
   getSelectableFields() {
     return [
       "_id",
+      "program_id",
       "name",
       "logo",
       "banner",
