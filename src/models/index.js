@@ -55,3 +55,4 @@ exports.StoreCategory = require("./StoreCategory");
 exports.Store = require("./Store");
 exports.StoreTag = require("./StoreTag");
 exports.SavedStore = require("./SavedStore");
+exports.PrinterDump= require("./PrinterDump");
