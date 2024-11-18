@@ -19,7 +19,7 @@ const SCHEMA = new Schema(
             enum: Object.values(TRANSACTION_SOURCE_NAME),
             required: true,
         },
-        source_type: {
+        earning_type: {
             type: String,
             enum: Object.values(TRANSACTION_TYPE),
             required: true,
@@ -50,7 +50,7 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(currency) {
-        const { id, transaction_type, source_type, name, created_at, updated_at } =
+        const { id, transaction_type, earning_type, name, created_at, updated_at } =
             currency;
 
         const serialized = {
@@ -58,7 +58,7 @@ SCHEMA.static({
         };
 
         serialized.name = name;
-        serialized.source_type = source_type;
+        serialized.earning_type = earning_type;
         serialized.transaction_type = transaction_type;
         serialized.created_at = created_at;
         serialized.updated_at = updated_at;
@@ -75,7 +75,7 @@ SCHEMA.static({
         return [
             "id",
             "transaction_type",
-            "source_type",
+            "earning_type",
             "name",
             "created_at",
             "updated_at",
