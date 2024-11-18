@@ -10,6 +10,11 @@ const SCHEMA = new Schema(
       required: true,
       trim: true,
     },
+    currency: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     name: {
       type: String,
       required: true,
@@ -42,32 +47,40 @@ const SCHEMA = new Schema(
       min: 0,
       max: 100,
     },
-    rates: {
-      type: [
-        {
-          rate_id: {
-            type: String,
-            required: true,
-          },
-          name: {
-            type: String,
-            required: true,
-            trim: true,
-          },
-          store_cashback_percentage: {
-            type: Number,
-            required: true,
-            min: 0,
-            max: 100,
-          },
-          app_cashback_percentage: {
-            type: Number,
-            required: true,
-            min: 0,
-            max: 100,
-          },
-        },
-      ],
+    // rates: {
+    //   type: [
+    //     {
+    //       rate_id: {
+    //         type: String,
+    //         required: true,
+    //       },
+    //       name: {
+    //         type: String,
+    //         required: true,
+    //         trim: true,
+    //       },
+    //       store_cashback_percentage: {
+    //         type: Number,
+    //         required: true,
+    //         min: 0,
+    //         max: 100,
+    //       },
+    //       app_cashback_percentage: {
+    //         type: Number,
+    //         required: true,
+    //         min: 0,
+    //         max: 100,
+    //       },
+    //     },
+    //   ],
+    //   required: true,
+    // },
+    actions: {
+      type: Object,
+      required: true,
+    },
+    actions_detail: {
+      type: Object,
       required: true,
     },
     categories: {
@@ -134,7 +147,7 @@ const SCHEMA = new Schema(
   }
 );
 
-// Static methods
+// Static Methods
 SCHEMA.statics = {
   serialize(store) {
     const {
@@ -146,7 +159,9 @@ SCHEMA.statics = {
       url,
       store_cashback_percentage,
       app_cashback_percentage,
-      rates,
+      // rates,
+      actions,
+      actions_detail,
       categories,
       tags,
       exclusion,
@@ -158,6 +173,7 @@ SCHEMA.statics = {
       deleted_at,
       deleted_by,
     } = store;
+
     return {
       id: _id,
       program_id,
@@ -167,7 +183,9 @@ SCHEMA.statics = {
       url,
       store_cashback_percentage,
       app_cashback_percentage,
-      rates,
+      // rates,
+      actions,
+      actions_detail,
       categories,
       tags,
       exclusion,
@@ -180,6 +198,8 @@ SCHEMA.statics = {
       deleted_by,
     };
   },
+
+  // Returns the list of selectable fields for queries
   getSelectableFields() {
     return [
       "_id",
@@ -190,7 +210,9 @@ SCHEMA.statics = {
       "url",
       "store_cashback_percentage",
       "app_cashback_percentage",
-      "rates",
+      // "rates",
+      "actions",
+      "actions_detail",
       "categories",
       "tags",
       "exclusion",
@@ -205,20 +227,22 @@ SCHEMA.statics = {
   },
 };
 
-// Instance methods
+// Instance Methods
 SCHEMA.methods = {
+  // Serialize the current document instance
   serialize() {
     return this.constructor.serialize(this);
   },
 };
 
-// JSON transformation
+// JSON Transformation for output
 SCHEMA.set("toJSON", {
   transform(doc) {
     return doc.serialize();
   },
 });
 
+// Create and export the Store model
 const MODEL = model(NAME.STORE, SCHEMA);
 
 module.exports = MODEL;
