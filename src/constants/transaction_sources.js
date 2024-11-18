@@ -2,6 +2,7 @@ const TRANSACTION_SOURCE_NAME = {
   MEMBERSHIP_CLAIM: "membership claim",
   REDEEM_POINTS: "redeem points",
   PURCHASE: "purchase",
+  POINTS_THROUGH_AFFILIATE_MARKETING: "points through affiliate marketing",
   REVIEW: "review",
   SOCIAL_SHARING: "social sharing",
   GAMIFICATION_BASED: "gamification based",
@@ -16,12 +17,12 @@ const TRANSACTION_SOURCE_NAME = {
   PURCHASE_ONLINE: "purchase-online",
 };
 const TRANSACTION_TYPE = {
-    NETWORK: "network",
-    MERCHANT: "merchant"
+  NETWORK: "network",
+  MERCHANT: "merchant"
 }
 const TRANSACTION_SOURCE_TYPE = {
-    EARNING: "earning",
-    REDEMPTION: "redemption"
+  EARNING: "earning",
+  REDEMPTION: "redemption"
 }
 const TRANSACTION_STATUS = {
   ENABLED: "enabled",
