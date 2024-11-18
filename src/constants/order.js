@@ -8,6 +8,11 @@ const ORDER_PLATFORM_TYPE = {
 
 };
 
+const AFFILIATE_ORDER_PLATFORM_TYPE = {
+  ADMITAD: "admitad"
+};
+
 module.exports = {
-    ORDER_PLATFORM_TYPE
+    ORDER_PLATFORM_TYPE,
+    AFFILIATE_ORDER_PLATFORM_TYPE
 }

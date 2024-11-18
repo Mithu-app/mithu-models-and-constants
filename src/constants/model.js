@@ -1,5 +1,7 @@
 "use strict";
 
+const { AFFILIATE_ORDER_PLATFORM_TYPE } = require("./order");
+
 const MODEL = {
   TOKEN: "Token",
   CUSTOMER: "Customer",
@@ -58,7 +60,8 @@ const MODEL = {
   STORE_CATEGORY: "StoreCategory",
   STORE: "Store",
   STORE_TAG: "StoreTag",
-  SAVED_STORE: "SavedStore"
+  SAVED_STORE: "SavedStore",
+  AFFILIATE_MARKETING_ORDER: "AffiliateMarketingOrder"
 };
 
 const COLLECTION = {
@@ -118,7 +121,8 @@ const COLLECTION = {
   STORE_CATEGORY: "store_category",
   STORE: "store",
   STORE_TAG: "store_tag",
-  SAVED_STORE: "saved_store"
+  SAVED_STORE: "saved_store",
+  AFFILIATE_MARKETING_ORDER: "affiliate_marketing_order"
 };
 
 const TIMESTAMPS = {
