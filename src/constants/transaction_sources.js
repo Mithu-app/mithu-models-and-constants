@@ -18,7 +18,8 @@ const TRANSACTION_SOURCE_NAME = {
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",
-  MERCHANT: "merchant"
+  MERCHANT: "merchant",
+  STORE: "store"
 }
 const TRANSACTION_SOURCE_TYPE = {
   EARNING: "earning",
