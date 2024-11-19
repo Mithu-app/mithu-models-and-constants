@@ -28,6 +28,9 @@ const TRANSACTION_SOURCE_TYPE = {
 const TRANSACTION_STATUS = {
   ENABLED: "enabled",
   DISABLED: "disabled",
+  APPROVED: "approved",
+  PENDING: "pending",
+  REJECTED: "rejected"
 };
 
 module.exports = {
