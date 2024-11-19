@@ -3,6 +3,7 @@
 const { AFFILIATE_ORDER_PLATFORM_TYPE } = require("./order");
 
 const MODEL = {
+  MITHU: "Mithu",
   TOKEN: "Token",
   CUSTOMER: "Customer",
   VERIFICATION: "Verification",
@@ -65,6 +66,7 @@ const MODEL = {
 };
 
 const COLLECTION = {
+  MITHU: "mithu",
   TOKEN: "tokens",
   CUSTOMER: "customers",
   RESET_PASSWORD: "reset_password",
