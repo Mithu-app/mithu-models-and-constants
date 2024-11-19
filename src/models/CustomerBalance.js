@@ -14,6 +14,13 @@ const SCHEMA = new Schema(
             type: Schema.Types.ObjectId,
             ref: NAME.MERCHANT,
         },
+        reference_id: {
+            type: Schema.Types.ObjectId,
+        },
+        reference_type: {
+            type: String,
+            enum: Object.values(COLLECTION),
+        },
         brandId: {
             type: Schema.Types.ObjectId,
             ref: NAME.BRAND,
@@ -32,11 +39,13 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
     serialize(customerBalance) {
-        const { _id, customerId, merchantId, brandId, balance } = customerBalance;
+        const { _id, customerId, merchantId, reference_id, reference_type, brandId, balance } = customerBalance;
 
         return {
             id: _id,
             customerId,
+            reference_id,
+            reference_type,
             merchantId,
             brandId,
             balance
@@ -48,6 +57,8 @@ SCHEMA.static({
             "customerId",
             "merchantId",
             "brandId",
+            "reference_id",
+            "reference_type",
             "balance"
         ];
     },
