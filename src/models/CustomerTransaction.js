@@ -47,6 +47,21 @@ const SCHEMA = new Schema(
       ref: NAME.MERCHANT,
       required: true,
     },
+    created_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    updated_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    deleted_at: {
+      type: Date,
+    },
+    deleted_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
   },
   {
     collection: COLLECTION.CUSTOMER_TRANSACTION,
@@ -60,47 +75,56 @@ SCHEMA.post("save", (doc, next) => {
 });
 
 SCHEMA.statics = {
-    serialize(transaction) {
-        const {
-          _id,
-          customer_id,
-          transaction_type,
-          status,
-          transaction_source_id,
-          points,
-          merchant_id,
-          timestamp,
-          reference_id,
-          reference_type,
-        } = transaction;
+  serialize(transaction) {
+    const {
+      _id,
+      customer_id,
+      transaction_type,
+      status,
+      transaction_source_id,
+      points,
+      merchant_id,
+      timestamp,
+      reference_id,
+      reference_type,
+      created_by,
+      deleted_at,
+      deleted_by,
+    } = transaction;
 
-        return {
-          id: _id,
-          customer_id,
-          transaction_type,
-          transaction_source_id,
-          status,
-          points,
-          merchant_id,
-          timestamp,
-          reference_id,
-          reference_type,
-        };
-    },
-    getSelectableFields() {
-        return [
-          "_id",
-          "customer_id",
-          "transaction_type",
-          "transaction_source_id",
-          "points",
-          "status",
-          "merchant_id",
-          "timestamp",
-          "reference_id",
-          "reference_type",
-        ];
-    }
+    return {
+      id: _id,
+      customer_id,
+      transaction_type,
+      transaction_source_id,
+      status,
+      points,
+      merchant_id,
+      timestamp,
+      reference_id,
+      reference_type,
+      created_by,
+      deleted_at,
+      deleted_by,
+    };
+  },
+  getSelectableFields() {
+    return [
+      "_id",
+      "customer_id",
+      "transaction_type",
+      "transaction_source_id",
+      "points",
+      "status",
+      "merchant_id",
+      "timestamp",
+      "reference_id",
+      "reference_type",
+      "created_by",
+      "deleted_at",
+      "deleted_by",
+    ];
+  },
 };
 
 SCHEMA.method({

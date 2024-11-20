@@ -41,6 +41,21 @@ const SCHEMA = new Schema(
     platform_id: {
       type: String,
     },
+    created_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    updated_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
+    deleted_at: {
+      type: Date,
+    },
+    deleted_by: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.USER,
+    },
   },
   {
     collection: COLLECTION.ORDER,
@@ -66,6 +81,9 @@ SCHEMA.statics = {
       platform_id,
       createdAt,
       updatedAt,
+      created_by,
+      deleted_at,
+      deleted_by,
     } = order;
     return {
       id: _id,
@@ -78,6 +96,9 @@ SCHEMA.statics = {
       discount_amount,
       createdAt,
       updatedAt,
+      created_by,
+      deleted_at,
+      deleted_by,
     };
   },
   getSelectableFields() {
@@ -92,6 +113,9 @@ SCHEMA.statics = {
       "platform_id",
       "createdAt",
       "updatedAt",
+      "created_by",
+      "deleted_at",
+      "deleted_by",
     ];
   },
 };
