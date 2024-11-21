@@ -133,6 +133,10 @@ const SCHEMA = new Schema(
       type: Boolean,
       default: false,
     },
+    acquisition : {
+      type : String,
+      default : "mobile app"
+    } 
   },
   {
     collection: COLLECTION.CUSTOMER,
@@ -153,6 +157,7 @@ SCHEMA.static({
       name,
       default_language,
       default_currency,
+      acquisition,
       currency_type,
       disable_nft,
       disable_earning,
@@ -187,6 +192,7 @@ SCHEMA.static({
     serialized.default_language = default_language;
     serialized.default_currency = default_currency;
     serialized.currency_type = currency_type;
+    serialized.acquisition = acquisition;
 
     if (name != null) serialized.name = name;
     if (date_of_birth != null) serialized.date_of_birth = date_of_birth;
@@ -228,6 +234,7 @@ SCHEMA.static({
       "referred_code",
       "disable_nft",
       "disable_earning",
+      "acquisition",
       "disable_redemption",
       "date_of_birth",
       "gender",
