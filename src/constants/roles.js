@@ -14,10 +14,10 @@ const PERSMISSIONS_TYPES = {
   CUSTOMER_SUPPORT: "Customer-Support",
   REPORTING_AND_ANALYTICS: "Reporting-And-Analytics",
   FAQS: "Faqs",
-  AFFILIATE_MARKETING: "Affiliate_Marketing",
-  DEVICE_MANAGEMENT: "Device_Management",
-  PUSH_NOTIFICATION: "Push_Notification",
-  SETTINGS_MANAGEMENT: "Settings_Management",
+  AFFILIATE_MARKETING: "Affiliate-Marketing",
+  DEVICE_MANAGEMENT: "Device-Management",
+  PUSH_NOTIFICATION: "Push-Notification",
+  SETTINGS_MANAGEMENT: "Settings-Management",
 };
 
 const PERMISSION_ACTION_TYPES = {
