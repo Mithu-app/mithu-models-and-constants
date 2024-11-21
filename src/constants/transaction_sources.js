@@ -15,6 +15,7 @@ const TRANSACTION_SOURCE_NAME = {
   REVIEW_EXTERNALLY_OR_INTERNALLY: "review externally or internally",
   REFERRAL_BASED_POINTS: "referral based points",
   PURCHASE_ONLINE: "purchase-online",
+  VENDOR_TOPUP: "points through vendor topup",
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",

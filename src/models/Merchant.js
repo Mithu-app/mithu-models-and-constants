@@ -215,6 +215,7 @@ const SCHEMA = new Schema(
     },
     reward_points: {
       type: Number,
+      required: true,
     },
     merchant_tag_ids: [
       {
