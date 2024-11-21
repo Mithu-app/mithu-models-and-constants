@@ -82,10 +82,9 @@ const SCHEMA = new Schema(
           `${props.value} is not a valid unique code. It must be exactly 6 characters long.`,
       },
     },
-    platform : {
-      type : String,
-      enum : Object.values(ORDER_PLATFORM_TYPE),
-
+    platform: {
+      type: String,
+      enum: Object.values(ORDER_PLATFORM_TYPE),
     },
     password: {
       type: String,
@@ -214,6 +213,9 @@ const SCHEMA = new Schema(
     network_cashback_percentage: {
       type: Number,
     },
+    reward_points: {
+      type: Number,
+    },
     merchant_tag_ids: [
       {
         type: Schema.Types.ObjectId,
@@ -289,6 +291,7 @@ SCHEMA.statics = {
       minimum_redeem_points,
       cashback_percent,
       network_cashback_percentage,
+      reward_points,
       logo,
       cover_image,
       listing_image,
@@ -329,6 +332,7 @@ SCHEMA.statics = {
       minimum_redeem_points,
       cashback_percent,
       network_cashback_percentage,
+      reward_points,
       logo,
       cover_image,
       listing_image,
@@ -371,6 +375,7 @@ SCHEMA.statics = {
       "minimum_redeem_points",
       "cashback_percent",
       "network_cashback_percentage",
+      "reward_points",
       "logo",
       "country_id",
       "state_id",

@@ -57,3 +57,4 @@ exports.StoreTag = require("./StoreTag");
 exports.SavedStore = require("./SavedStore");
 exports.PrinterDump = require("./PrinterDump");
 exports.AffiliateMarketingOrder = require("./AffiliateMarketingOrder");
+exports.Topup = require("./Topup");
