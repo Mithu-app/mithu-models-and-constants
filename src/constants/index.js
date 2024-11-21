@@ -41,4 +41,5 @@ module.exports = {
   ...require("./storeCategory"),
   ...require("./store"),
   ...require("./storeTag"),
+  ...require("./topup"),
 };

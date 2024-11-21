@@ -216,9 +216,6 @@ const SCHEMA = new Schema(
     reward_points: {
       type: Number,
     },
-    network_reward_points: {
-      type: Number,
-    },
     merchant_tag_ids: [
       {
         type: Schema.Types.ObjectId,
@@ -295,7 +292,6 @@ SCHEMA.statics = {
       cashback_percent,
       network_cashback_percentage,
       reward_points,
-      network_reward_points,
       logo,
       cover_image,
       listing_image,
@@ -337,7 +333,6 @@ SCHEMA.statics = {
       cashback_percent,
       network_cashback_percentage,
       reward_points,
-      network_reward_points,
       logo,
       cover_image,
       listing_image,
@@ -381,7 +376,6 @@ SCHEMA.statics = {
       "cashback_percent",
       "network_cashback_percentage",
       "reward_points",
-      "network_reward_points",
       "logo",
       "country_id",
       "state_id",

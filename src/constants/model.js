@@ -62,7 +62,8 @@ const MODEL = {
   STORE: "Store",
   STORE_TAG: "StoreTag",
   SAVED_STORE: "SavedStore",
-  AFFILIATE_MARKETING_ORDER: "AffiliateMarketingOrder"
+  AFFILIATE_MARKETING_ORDER: "AffiliateMarketingOrder",
+  TOPUP: "Topup",
 };
 
 const COLLECTION = {
@@ -124,7 +125,8 @@ const COLLECTION = {
   STORE: "store",
   STORE_TAG: "store_tag",
   SAVED_STORE: "saved_store",
-  AFFILIATE_MARKETING_ORDER: "affiliate_marketing_order"
+  AFFILIATE_MARKETING_ORDER: "affiliate_marketing_order",
+  TOPUP: "topup",
 };
 
 const TIMESTAMPS = {
