@@ -18,6 +18,7 @@ const PERSMISSIONS_TYPES = {
   DEVICE_MANAGEMENT: "Device-Management",
   PUSH_NOTIFICATION: "Push-Notification",
   SETTINGS_MANAGEMENT: "Settings-Management",
+  CART_RULES_MANAGEMENT: "Cart-Rules-Management",
 };
 
 const PERMISSION_ACTION_TYPES = {
