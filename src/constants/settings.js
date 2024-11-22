@@ -4,6 +4,9 @@ const SETTINGS_KEYS = {
   REDEMPTION_MESSAGE_WHATSAPP: "redemption-message-whatsapp",
   LINK_CUSTOMER_SESSION_TO_ORDER: "link_customer_session_to_order",
   NON_INTEGRATED_VENDOR_EARN_POINTS: "non_integrated_vendor_earn_points",
+  TOPUP_MESSAGE_TO_USER: "topup_message_to_user",
+  EARNING_MESSAGE_WHATSAPP: "earning_message_whatsapp",
+  EARNING_MESSAGE_TAQNYAT: "earning_message_taqnyat",
 };
 
 module.exports = {
