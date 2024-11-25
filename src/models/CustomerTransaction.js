@@ -52,7 +52,7 @@ const SCHEMA = new Schema(
     merchant_id: {
       type: Schema.Types.ObjectId,
       ref: NAME.MERCHANT,
-      required: true,
+      // required: true,
     },
     created_by: {
       type: Schema.Types.ObjectId,
