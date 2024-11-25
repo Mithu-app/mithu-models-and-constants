@@ -28,6 +28,13 @@ const SCHEMA = new Schema(
       type: String,
       enum: Object.values(COLLECTION),
     },
+    entity_id: {
+      type: Schema.Types.ObjectId,
+    },
+    entity_type: {
+      type: String,
+      enum: Object.values(COLLECTION),
+    },
     transaction_type: {
       type: String,
       enum: Object.values(TRANSACTION_SOURCE_TYPE),
@@ -84,6 +91,8 @@ SCHEMA.statics = {
       transaction_source_id,
       points,
       merchant_id,
+      entity_type,
+      entity_id,
       timestamp,
       reference_id,
       reference_type,
@@ -101,6 +110,8 @@ SCHEMA.statics = {
       points,
       merchant_id,
       timestamp,
+      entity_type,
+      entity_id,
       reference_id,
       reference_type,
       created_by,
