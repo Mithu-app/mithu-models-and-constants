@@ -6,6 +6,7 @@ const {
   TIMESTAMPS,
   TRANSACTION_SOURCE_TYPE,
   TRANSACTION_STATUS,
+  TRANSACTION_TYPE,
 } = require("../constants");
 const { Schema, model } = require("mongoose");
 const { emitEvent } = require("../../socket");
@@ -49,6 +50,11 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
+    provider: {
+      type: String,
+      enum: Object.values(TRANSACTION_TYPE),
+      required: true,
+    },
     merchant_id: {
       type: Schema.Types.ObjectId,
       ref: NAME.MERCHANT,
@@ -90,6 +96,7 @@ SCHEMA.statics = {
       status,
       transaction_source_id,
       points,
+      provider,
       merchant_id,
       entity_type,
       entity_id,
@@ -108,6 +115,7 @@ SCHEMA.statics = {
       transaction_source_id,
       status,
       points,
+      provider,
       merchant_id,
       timestamp,
       entity_type,
@@ -127,6 +135,7 @@ SCHEMA.statics = {
       "transaction_source_id",
       "points",
       "status",
+      "provider",
       "merchant_id",
       "timestamp",
       "reference_id",
