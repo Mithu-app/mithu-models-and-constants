@@ -7,6 +7,10 @@ const ORDER_PLATFORM_TYPE = {
   PRINTER : "printer"
 
 };
+const ORDER_STATUS = {
+  CREATED : 'created',
+  REJECTED : 'rejected'
+};
 
 const AFFILIATE_ORDER_PLATFORM_TYPE = {
   ADMITAD: "admitad"
@@ -14,5 +18,6 @@ const AFFILIATE_ORDER_PLATFORM_TYPE = {
 
 module.exports = {
     ORDER_PLATFORM_TYPE,
+    ORDER_STATUS,
     AFFILIATE_ORDER_PLATFORM_TYPE
 }

@@ -5,6 +5,7 @@ const {
   COLLECTION,
   TIMESTAMPS,
   ORDER_PLATFORM_TYPE,
+  ORDER_STATUS
 } = require("../constants");
 const { Schema, model } = require("mongoose");
 const { emitEvent } = require("../../socket");
@@ -37,6 +38,11 @@ const SCHEMA = new Schema(
     discount_amount: {
       type: Number,
       default: 0,
+    },
+    status: {
+      type: String,
+      enum: Object.values(ORDER_STATUS),
+      default: ORDER_STATUS.CREATED
     },
     platform_id: {
       type: String,
@@ -74,6 +80,7 @@ SCHEMA.statics = {
       _id,
       order_number,
       merchant_id,
+      status,
       discount_amount,
       customer_id,
       amount,
@@ -89,6 +96,7 @@ SCHEMA.statics = {
       id: _id,
       order_number,
       merchant_id,
+      status,
       customer_id,
       platform_type,
       platform_id,
@@ -107,6 +115,7 @@ SCHEMA.statics = {
       "order_number",
       "merchant_id",
       "customer_id",
+      "status",
       "amount",
       "discount_amount",
       "platform_type",
@@ -127,9 +136,9 @@ SCHEMA.methods = {
 };
 
 SCHEMA.set("toJSON", {
-    transform(doc) {
-        return doc.serialize();
-    },
+  transform(doc) {
+    return doc.serialize();
+  },
 });
 
 const MODEL = model(NAME.ORDER, SCHEMA);
