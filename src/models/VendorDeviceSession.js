@@ -15,8 +15,6 @@ const SCHEMA = new Schema(
     device_id: {
       type: Schema.Types.ObjectId,
       ref: NAME.DEVICE,
-      unique: true,
-      required: true,
     },
     status: {
       type: String,
