@@ -59,3 +59,4 @@ exports.PrinterDump = require("./PrinterDump");
 exports.AffiliateMarketingOrder = require("./AffiliateMarketingOrder");
 exports.Topup = require("./Topup");
 exports.SmsLog = require("./SmsLog");
+exports.VendorDeviceSession = require("./VendorDeviceSession");

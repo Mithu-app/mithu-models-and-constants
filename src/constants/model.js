@@ -65,6 +65,7 @@ const MODEL = {
   AFFILIATE_MARKETING_ORDER: "AffiliateMarketingOrder",
   TOPUP: "Topup",
   SMS_LOG: "SmsLOG",
+  VENDOR_DEVICE_SESSION: "VendorDeviceSession",
 };
 
 const COLLECTION = {
@@ -129,6 +130,7 @@ const COLLECTION = {
   AFFILIATE_MARKETING_ORDER: "affiliate_marketing_order",
   TOPUP: "topup",
   SMS_LOG: "smsLog",
+  VENDOR_DEVICE_SESSION: "vendor_device_session",
 };
 
 const TIMESTAMPS = {
