@@ -42,4 +42,5 @@ module.exports = {
   ...require("./store"),
   ...require("./storeTag"),
   ...require("./topup"),
+  ...require("./vendorDeviceSession"),
 };
