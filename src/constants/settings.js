@@ -7,8 +7,10 @@ const SETTINGS_KEYS = {
   TOPUP_MESSAGE_TO_USER: "topup_message_to_user",
   EARNING_MESSAGE_WHATSAPP: "earning_message_whatsapp",
   EARNING_MESSAGE_TAQNYAT: "earning_message_taqnyat",
+  IN_ACTIVE_VENDOR_DEVICES_ALERT_EMAILS:
+    "in_active_vendor_devices_alert_emails",
 };
 
 module.exports = {
-    SETTINGS_KEYS
-}
+  SETTINGS_KEYS,
+};
