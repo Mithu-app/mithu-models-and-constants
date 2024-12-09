@@ -4,7 +4,8 @@ const ORDER_PLATFORM_TYPE = {
   LAZYWAIT: "lazywait",
   VENDOR_NON_INTEGRATED: "vendor_non_integrated",
   MITHU_CASHIER_APP : "mithu_cashier_app",
-  PRINTER : "printer"
+  PRINTER : "printer",
+  DEFAULT : ""
 
 };
 const ORDER_STATUS = {
