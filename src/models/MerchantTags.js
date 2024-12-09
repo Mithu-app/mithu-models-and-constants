@@ -1,5 +1,6 @@
 "use strict";
 
+const { required } = require("joi");
 const { MODEL: NAME, COLLECTION, TIMESTAMPS } = require("../constants");
 const { Schema, model } = require("mongoose");
 
@@ -8,6 +9,11 @@ const SCHEMA = new Schema(
     name: {
       type: String,
       required: true,
+    },
+    sub_title: {
+      type: String,
+      required: false,
+      default: "",
     },
     image: {
       type: String,
@@ -41,17 +47,19 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(merchantTags) {
-    const { _id, name, image, display_order, created_by } = merchantTags;
+    const { _id, name, sub_title, image, display_order, created_by } =
+      merchantTags;
     return {
       id: _id,
       name,
+      sub_title,
       image,
       display_order,
       created_by,
     };
   },
   getSelectableFields() {
-    return ["_id", "name", "image", "display_order", "created_by"];
+    return ["_id", "name", "sub_title", "image", "display_order", "created_by"];
   },
 });
 
