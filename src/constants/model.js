@@ -66,6 +66,8 @@ const MODEL = {
   TOPUP: "Topup",
   SMS_LOG: "SmsLOG",
   VENDOR_DEVICE_SESSION: "VendorDeviceSession",
+  SPIN_MACHINE_GAME: "SpinMachineGame",
+  SLOT_MACHINE_GAME: "SlotMachineGame",
 };
 
 const COLLECTION = {
@@ -131,6 +133,8 @@ const COLLECTION = {
   TOPUP: "topup",
   SMS_LOG: "smsLog",
   VENDOR_DEVICE_SESSION: "vendor_device_session",
+  SPIN_MACHINE_GAME: "spin_machine_game",
+  SLOT_MACHINE_GAME: "slot_machine_game",
 };
 
 const TIMESTAMPS = {
