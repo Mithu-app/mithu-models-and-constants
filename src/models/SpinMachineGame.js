@@ -25,6 +25,10 @@ const SCHEMA = new Schema(
       type: String,
       required: true,
     },
+    display_order: {
+      type: Number,
+      required: true,
+    },
     created_by: {
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
@@ -56,6 +60,7 @@ SCHEMA.static({
       probability_wheel_2,
       probability_wheel_3,
       image,
+      display_order,
       created_by,
     } = spinMachine;
     return {
@@ -65,6 +70,7 @@ SCHEMA.static({
       probability_wheel_2,
       probability_wheel_3,
       image,
+      display_order,
       created_by,
     };
   },
@@ -76,6 +82,7 @@ SCHEMA.static({
       "probability_wheel_2",
       "probability_wheel_3",
       "image",
+      "display_order",
       "created_by",
     ];
   },
