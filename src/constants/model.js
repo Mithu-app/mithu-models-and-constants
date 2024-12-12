@@ -68,6 +68,8 @@ const MODEL = {
   VENDOR_DEVICE_SESSION: "VendorDeviceSession",
   SPIN_MACHINE_GAME: "SpinMachineGame",
   SLOT_MACHINE_GAME: "SlotMachineGame",
+  MESSAGE_QUEUE: "MessageQueue",
+  MESSAGE_QUEUE_RECORD: "MessageQueueRecord",
 };
 
 const COLLECTION = {
@@ -135,6 +137,8 @@ const COLLECTION = {
   VENDOR_DEVICE_SESSION: "vendor_device_session",
   SPIN_MACHINE_GAME: "spin_machine_game",
   SLOT_MACHINE_GAME: "slot_machine_game",
+  MESSAGE_QUEUE: "message_queue",
+  MESSAGE_QUEUE_RECORD: "message_queue_record",
 };
 
 const TIMESTAMPS = {
