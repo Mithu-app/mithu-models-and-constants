@@ -37,6 +37,10 @@ const SCHEMA = new Schema(
             type: Number,
             default: 0,
         },
+        per_day_sms_count: {
+            type : Number,
+            required : true
+        },
         records_sent: {
             type: Number,
             default: 0,
@@ -56,6 +60,7 @@ const SCHEMA = new Schema(
             type: Schema.Types.ObjectId,
             ref: NAME.USER,
         },
+
     },
     {
         collection: COLLECTION.MESSAGE_QUEUE,

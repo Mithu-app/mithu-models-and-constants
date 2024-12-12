@@ -11,10 +11,6 @@ const SCHEMA = new Schema(
             default: QUEUE_RECORD_STATUS.VALID,
             enum: Object.values(QUEUE_RECORD_STATUS)
         },
-        per_day_sms_count: {
-            type : Number,
-            required : true
-        },
         queue_id: {
             type: Schema.Types.ObjectId,
             required: true,
