@@ -60,3 +60,5 @@ exports.AffiliateMarketingOrder = require("./AffiliateMarketingOrder");
 exports.Topup = require("./Topup");
 exports.SmsLog = require("./SmsLog");
 exports.VendorDeviceSession = require("./VendorDeviceSession");
+exports.MessageQueue = require("./MessageQueue");
+exports.MessageQueueRecord = require("./MessageQueueRecord");

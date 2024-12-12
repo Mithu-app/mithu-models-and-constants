@@ -66,6 +66,8 @@ const MODEL = {
   TOPUP: "Topup",
   SMS_LOG: "SmsLOG",
   VENDOR_DEVICE_SESSION: "VendorDeviceSession",
+  MESSAGE_QUEUE: "MessageQueue",
+  MESSAGE_QUEUE_RECORD: "MessageQueueRecord",
 };
 
 const COLLECTION = {
@@ -131,6 +133,8 @@ const COLLECTION = {
   TOPUP: "topup",
   SMS_LOG: "smsLog",
   VENDOR_DEVICE_SESSION: "vendor_device_session",
+  MESSAGE_QUEUE: "message_queue",
+  MESSAGE_QUEUE_RECORD: "message_queue_record",
 };
 
 const TIMESTAMPS = {
