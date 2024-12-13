@@ -1,5 +1,6 @@
 "use strict";
 
+const { object } = require("joi");
 const { MODEL: NAME, COLLECTION, TIMESTAMPS, QUEUE_RECORD_STATUS } = require("../constants");
 const { Schema, model, Types } = require("mongoose");
 
@@ -27,6 +28,9 @@ const SCHEMA = new Schema(
                 generic: Boolean,
             },
         ],
+        response : {
+            type :Schema.Types.Mixed,
+        },
         completed_at : Date
     },
     {
