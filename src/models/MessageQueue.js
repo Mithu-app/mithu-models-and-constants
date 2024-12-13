@@ -41,7 +41,14 @@ const SCHEMA = new Schema(
             type : Number,
             required : true
         },
-        records_sent: {
+        last_sent_at : {
+            type : Date
+        },
+        daily_records_sent: {
+            type: Number,
+            default: 0,
+        },
+        total_records_sent: {
             type: Number,
             default: 0,
         },
