@@ -9,12 +9,16 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
-    probability: {
+    probability_wheel_1: {
       type: Number,
       required: true,
     },
-    symbol: {
-      type: String,
+    probability_wheel_2: {
+      type: Number,
+      required: true,
+    },
+    probability_wheel_3: {
+      type: Number,
       required: true,
     },
     display_order: {
@@ -44,14 +48,22 @@ const SCHEMA = new Schema(
 );
 
 SCHEMA.static({
-  serialize(slotMachine) {
-    const { _id, points, probability, display_order, symbol, created_by } =
-      slotMachine;
+  serialize(spinMachine) {
+    const {
+      _id,
+      points,
+      probability_wheel_1,
+      probability_wheel_2,
+      probability_wheel_3,
+      display_order,
+      created_by,
+    } = spinMachine;
     return {
       id: _id,
       points,
-      probability,
-      symbol,
+      probability_wheel_1,
+      probability_wheel_2,
+      probability_wheel_3,
       display_order,
       created_by,
     };
@@ -60,8 +72,9 @@ SCHEMA.static({
     return [
       "_id",
       "points",
-      "probability",
-      "symbol",
+      "probability_wheel_1",
+      "probability_wheel_2",
+      "probability_wheel_3",
       "display_order",
       "created_by",
     ];

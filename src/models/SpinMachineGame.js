@@ -9,16 +9,12 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
-    probability_wheel_1: {
+    probability: {
       type: Number,
       required: true,
     },
-    probability_wheel_2: {
-      type: Number,
-      required: true,
-    },
-    probability_wheel_3: {
-      type: Number,
+    symbol: {
+      type: String,
       required: true,
     },
     display_order: {
@@ -42,28 +38,20 @@ const SCHEMA = new Schema(
     },
   },
   {
-    collection: COLLECTION.SLOT_MACHINE_GAME,
+    collection: COLLECTION.SPIN_MACHINE_GAME,
     timestamps: TIMESTAMPS,
   }
 );
 
 SCHEMA.static({
-  serialize(spinMachine) {
-    const {
-      _id,
-      points,
-      probability_wheel_1,
-      probability_wheel_2,
-      probability_wheel_3,
-      display_order,
-      created_by,
-    } = spinMachine;
+  serialize(slotMachine) {
+    const { _id, points, probability, display_order, symbol, created_by } =
+      slotMachine;
     return {
       id: _id,
       points,
-      probability_wheel_1,
-      probability_wheel_2,
-      probability_wheel_3,
+      probability,
+      symbol,
       display_order,
       created_by,
     };
@@ -72,9 +60,8 @@ SCHEMA.static({
     return [
       "_id",
       "points",
-      "probability_wheel_1",
-      "probability_wheel_2",
-      "probability_wheel_3",
+      "probability",
+      "symbol",
       "display_order",
       "created_by",
     ];
@@ -93,6 +80,6 @@ SCHEMA.set("toJSON", {
   },
 });
 
-const MODEL = model(NAME.SLOT_MACHINE_GAME, SCHEMA);
+const MODEL = model(NAME.SPIN_MACHINE_GAME, SCHEMA);
 
 module.exports = MODEL;
