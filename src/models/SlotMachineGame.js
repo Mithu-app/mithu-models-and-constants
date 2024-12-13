@@ -13,7 +13,7 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
-    image: {
+    symbol: {
       type: String,
       required: true,
     },
@@ -45,13 +45,13 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(slotMachine) {
-    const { _id, points, probability, display_order, image, created_by } =
+    const { _id, points, probability, display_order, symbol, created_by } =
       slotMachine;
     return {
       id: _id,
       points,
       probability,
-      image,
+      symbol,
       display_order,
       created_by,
     };
@@ -61,7 +61,7 @@ SCHEMA.static({
       "_id",
       "points",
       "probability",
-      "image",
+      "symbol",
       "display_order",
       "created_by",
     ];

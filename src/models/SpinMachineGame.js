@@ -21,10 +21,6 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
-    image: {
-      type: String,
-      required: true,
-    },
     display_order: {
       type: Number,
       required: true,
@@ -59,7 +55,6 @@ SCHEMA.static({
       probability_wheel_1,
       probability_wheel_2,
       probability_wheel_3,
-      image,
       display_order,
       created_by,
     } = spinMachine;
@@ -69,7 +64,6 @@ SCHEMA.static({
       probability_wheel_1,
       probability_wheel_2,
       probability_wheel_3,
-      image,
       display_order,
       created_by,
     };
@@ -81,7 +75,6 @@ SCHEMA.static({
       "probability_wheel_1",
       "probability_wheel_2",
       "probability_wheel_3",
-      "image",
       "display_order",
       "created_by",
     ];
