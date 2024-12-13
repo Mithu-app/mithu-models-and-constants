@@ -60,5 +60,7 @@ exports.AffiliateMarketingOrder = require("./AffiliateMarketingOrder");
 exports.Topup = require("./Topup");
 exports.SmsLog = require("./SmsLog");
 exports.VendorDeviceSession = require("./VendorDeviceSession");
+exports.SlotMachineGame = require("./SlotMachineGame");
+exports.SpinMachineGame = require("./SpinMachineGame");
 exports.MessageQueue = require("./MessageQueue");
 exports.MessageQueueRecord = require("./MessageQueueRecord");
