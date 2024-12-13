@@ -6,9 +6,8 @@ const { Schema, model, Types } = require("mongoose");
 
 const SCHEMA = new Schema(
     {
-        status: { 
+        status: {
             type: String,
-            required: true,
             default: QUEUE_RECORD_STATUS.VALID,
             enum: Object.values(QUEUE_RECORD_STATUS)
         },
@@ -28,10 +27,10 @@ const SCHEMA = new Schema(
                 generic: Boolean,
             },
         ],
-        response : {
-            type :Schema.Types.Mixed,
+        response: {
+            type: Schema.Types.Mixed,
         },
-        completed_at : Date
+        completed_at: Date
     },
     {
         collection: COLLECTION.MESSAGE_QUEUE_RECORD,
