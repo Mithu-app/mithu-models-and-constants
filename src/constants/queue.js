@@ -6,7 +6,7 @@ const QUEUE_STATUS = {
 const QUEUE_RECORD_STATUS = {
     VALID: 'pending',
     INVALID: 'invalid',
-    SUCCUESS: 'success' // means msg has been sent to user's phone number
+    SUCCESS: 'success' // means msg has been sent to user's phone number
 }
 
 const QUEUE_TYPE = {
