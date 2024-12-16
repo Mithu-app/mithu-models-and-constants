@@ -13,10 +13,6 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
-    symbol: {
-      type: String,
-      required: true,
-    },
     display_order: {
       type: Number,
       required: true,
@@ -45,26 +41,17 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(slotMachine) {
-    const { _id, points, probability, display_order, symbol, created_by } =
-      slotMachine;
+    const { _id, points, probability, display_order, created_by } = slotMachine;
     return {
       id: _id,
       points,
       probability,
-      symbol,
       display_order,
       created_by,
     };
   },
   getSelectableFields() {
-    return [
-      "_id",
-      "points",
-      "probability",
-      "symbol",
-      "display_order",
-      "created_by",
-    ];
+    return ["_id", "points", "probability", "display_order", "created_by"];
   },
 });
 
