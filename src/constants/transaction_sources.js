@@ -16,23 +16,25 @@ const TRANSACTION_SOURCE_NAME = {
   REFERRAL_BASED_POINTS: "referral based points",
   PURCHASE_ONLINE: "purchase-online",
   VENDOR_TOPUP: "points through vendor topup",
-  SIGNUP_TOPUP_POINTS: "signup topup points"
+  SIGNUP_TOPUP_POINTS: "signup topup points",
+  SPIN_WHEEL_GAME_POINTS: "points through spin wheel game",
+  SLOT_MACHINE_GAME_POINTS: "points through slot machine game",
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",
   MERCHANT: "merchant",
-  STORE: "store"
-}
+  STORE: "store",
+};
 const TRANSACTION_SOURCE_TYPE = {
   EARNING: "earning",
-  REDEMPTION: "redemption"
-}
+  REDEMPTION: "redemption",
+};
 const TRANSACTION_STATUS = {
   ENABLED: "enabled",
   DISABLED: "disabled",
   APPROVED: "approved",
   PENDING: "pending",
-  REJECTED: "rejected"
+  REJECTED: "rejected",
 };
 
 module.exports = {
