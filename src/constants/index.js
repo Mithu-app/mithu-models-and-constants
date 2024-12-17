@@ -44,4 +44,5 @@ module.exports = {
   ...require("./topup"),
   ...require("./vendorDeviceSession"),
   ...require("./queue"),
+  ...require("./gamification"),
 };

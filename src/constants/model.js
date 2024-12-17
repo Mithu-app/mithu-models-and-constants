@@ -70,6 +70,7 @@ const MODEL = {
   SLOT_MACHINE_GAME: "SlotMachineGame",
   MESSAGE_QUEUE: "MessageQueue",
   MESSAGE_QUEUE_RECORD: "MessageQueueRecord",
+  GAMIFICATION: "Gamification",
 };
 
 const COLLECTION = {
@@ -139,6 +140,7 @@ const COLLECTION = {
   SLOT_MACHINE_GAME: "slot_machine_game",
   MESSAGE_QUEUE: "message_queue",
   MESSAGE_QUEUE_RECORD: "message_queue_record",
+  GAMIFICATION: "gamification",
 };
 
 const TIMESTAMPS = {
