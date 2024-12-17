@@ -16,7 +16,7 @@ const TRANSACTION_SOURCE_NAME = {
   REFERRAL_BASED_POINTS: "referral based points",
   PURCHASE_ONLINE: "purchase-online",
   VENDOR_TOPUP: "points through vendor topup",
-  FIRST_LOGIN_TOPUP_POINTS: "first login topup points"
+  SIGNUP_TOPUP_POINTS: "signup topup points"
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",
