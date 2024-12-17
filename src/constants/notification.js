@@ -31,7 +31,7 @@ const NOTIFICATION_TITLE_ARABIC = {
 };
 
 const NOTIFICATION_DESCRIPTION_ENGLISH = {
-  SIGNUP_TOPUP_POINTS: (points, pointsToFiat) => `Congrats, you’ve earned ${points} points worth ${[pointsToFiat]} SAR signing up, You earned it!`,
+  SIGNUP_TOPUP_POINTS: (points, pointsToFiat) => `Congrats, you’ve earned ${points} points worth ${[pointsToFiat]} SAR for signing up, You earned it!`,
   ORDER_THROUGH_MERCHANT: "thank you for ordering with Mithu.",
   PURCHASE_THROUGH_STORE: "thank you for ordering with Mithu.",
 };
