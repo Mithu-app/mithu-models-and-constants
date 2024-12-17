@@ -10,7 +10,7 @@ const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(
   {
-    customerId: {
+    customer_id: {
       type: Schema.Types.ObjectId,
       ref: NAME.CUSTOMER,
       required: true,
@@ -51,10 +51,10 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(slotMachine) {
-    const { _id, customerId, index, points, type, created_by } = slotMachine;
+    const { _id, customer_id, index, points, type, created_by } = slotMachine;
     return {
       id: _id,
-      customerId,
+      customer_id,
       index,
       points,
       type,
@@ -62,7 +62,7 @@ SCHEMA.static({
     };
   },
   getSelectableFields() {
-    return ["id", "customerId", "index", "points", "type", "created_by"];
+    return ["id", "customer_id", "index", "points", "type", "created_by"];
   },
 });
 
