@@ -37,10 +37,10 @@ const NOTIFICATION_DESCRIPTION_ENGLISH = {
 };
 
 const NOTIFICATION_TITLE_ENGLISH = {
-  SIGNUP_TOPUP_POINTS: "signup topup points",
-  MEMBERSHIP_CARD_MINTING: "membership card minting",
-  ORDER_THROUGH_MERCHANT: "purchase through merchant",
-  PURCHASE_THROUGH_STORE: "purchase through store",
+  SIGNUP_TOPUP_POINTS: "Signup topup points",
+  MEMBERSHIP_CARD_MINTING: "Membership card minting",
+  ORDER_THROUGH_MERCHANT: "Purchase through merchant",
+  PURCHASE_THROUGH_STORE: "Purchase through store",
 };
 module.exports = {
   NOTIFICATION_DESCRIPTION_ARABIC,
