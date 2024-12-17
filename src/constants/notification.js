@@ -21,20 +21,23 @@ const NOTIFICATION_DESCRIPTION_ARABIC = {
   MEMBERSHIP_CARD_SCHEDULING: (merchantName, scheduledTime) =>
     ` تمت جدولة بطاقة عضوية NFT الخاصة بك من ${merchantName} إلى ${scheduledTime}`,
   PURCHASE_THROUGH_STORE: "شكرا لك على الشراء من المتجر مع ميثو.",
+  FIRST_LOGIN_TOPUP: "مبروك! لقد كسبت 500 نقطة بقيمة 18 ريال سعودي عند التسجيل. لقد استحقيتها!"
 };
 const NOTIFICATION_TITLE_ARABIC = {
   MEMBERSHIP_CARD_MINTING: "سك بطاقة العضوية",
+  FIRST_LOGIN_TOPUP: "نقاط شحن تسجيل الدخول الأولى",
   ORDER_THROUGH_MERCHANT: "الشراء من خلال التاجر",
   PURCHASE_THROUGH_STORE: "شكرا لك على الشراء من المتجر مع ميثو.",
 };
 
 const NOTIFICATION_DESCRIPTION_ENGLISH = {
-
+  FIRST_LOGIN_TOPUP: "Congrats, you’ve earned 500 points worth 18 SAR signing up, You earned it!",
   ORDER_THROUGH_MERCHANT: "thank you for ordering with Mithu.",
   PURCHASE_THROUGH_STORE: "thank you for ordering with Mithu.",
 };
 
 const NOTIFICATION_TITLE_ENGLISH = {
+  FIRST_LOGIN_TOPUP: "first login topup points",
   MEMBERSHIP_CARD_MINTING: "membership card minting",
   ORDER_THROUGH_MERCHANT: "purchase through merchant",
   PURCHASE_THROUGH_STORE: "purchase through store",
