@@ -17,8 +17,7 @@ const TRANSACTION_SOURCE_NAME = {
   PURCHASE_ONLINE: "purchase-online",
   VENDOR_TOPUP: "points through vendor topup",
   SIGNUP_TOPUP_POINTS: "signup topup points",
-  SPIN_WHEEL_GAME_POINTS: "points through spin wheel game",
-  SLOT_MACHINE_GAME_POINTS: "points through slot machine game",
+  POINTS_THROUGH_GAMIFICATION: "points through gamification",
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",
