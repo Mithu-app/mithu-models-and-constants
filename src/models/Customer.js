@@ -133,10 +133,14 @@ const SCHEMA = new Schema(
       type: Boolean,
       default: false,
     },
-    acquisition : {
-      type : String,
-      default : "mobile app"
-    } 
+    acquisition: {
+      type: String,
+      default: "mobile app",
+    },
+    is_earned_gaming_points: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     collection: COLLECTION.CUSTOMER,
@@ -181,6 +185,7 @@ SCHEMA.static({
       deleted_at,
       channel,
       customer_type,
+      is_earned_gaming_points,
     } = customer;
 
     const serialized = {
@@ -218,6 +223,7 @@ SCHEMA.static({
     serialized.disable_nft = disable_nft;
     serialized.disable_earning = disable_earning;
     serialized.disable_redemption = disable_redemption;
+    serialized.is_earned_gaming_points = is_earned_gaming_points;
     serialized.deleted_at = deleted_at;
 
     return serialized;
@@ -252,6 +258,7 @@ SCHEMA.static({
       "updated_at",
       "channel",
       "customer_type",
+      "is_earned_gaming_points",
       "deleted_at",
     ];
   },
