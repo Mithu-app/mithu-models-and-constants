@@ -27,6 +27,11 @@ const SCHEMA = new Schema(
       type: String,
       enum: Object.values(GAMIFICATION_TYPE),
     },
+    unique_number: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     created_by: {
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
@@ -51,18 +56,28 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(slotMachine) {
-    const { _id, customer_id, index, points, type, created_by } = slotMachine;
+    const { _id, customer_id, index, points, type, unique_number, created_by } =
+      slotMachine;
     return {
       id: _id,
       customer_id,
       index,
       points,
       type,
+      unique_number,
       created_by,
     };
   },
   getSelectableFields() {
-    return ["id", "customer_id", "index", "points", "type", "created_by"];
+    return [
+      "id",
+      "customer_id",
+      "index",
+      "points",
+      "type",
+      "unique_number",
+      "created_by",
+    ];
   },
 });
 
