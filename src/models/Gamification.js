@@ -32,6 +32,25 @@ const SCHEMA = new Schema(
       required: true,
       unique: true,
     },
+    reference_id: {
+      type: Schema.Types.ObjectId,
+    },
+    reference_type: {
+      type: String,
+      enum: Object.values(COLLECTION),
+    },
+    amount: {
+      type: Number,
+    },
+    discount_amount: {
+      type: Number,
+      default: 0,
+    },
+    currency: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.CURRENCY,
+      required: true,
+    },
     created_by: {
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
@@ -56,8 +75,20 @@ const SCHEMA = new Schema(
 
 SCHEMA.static({
   serialize(slotMachine) {
-    const { _id, customer_id, index, points, type, unique_number, created_by } =
-      slotMachine;
+    const {
+      _id,
+      customer_id,
+      index,
+      points,
+      type,
+      unique_number,
+      reference_id,
+      reference_type,
+      amount,
+      discount_amount,
+      currency,
+      created_by,
+    } = slotMachine;
     return {
       id: _id,
       customer_id,
@@ -65,6 +96,11 @@ SCHEMA.static({
       points,
       type,
       unique_number,
+      reference_id,
+      reference_type,
+      amount,
+      discount_amount,
+      currency,
       created_by,
     };
   },
@@ -76,6 +112,11 @@ SCHEMA.static({
       "points",
       "type",
       "unique_number",
+      "reference_id",
+      "reference_type",
+      "amount",
+      "discount_amount",
+      "currency",
       "created_by",
     ];
   },
