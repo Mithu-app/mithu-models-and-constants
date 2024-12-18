@@ -71,6 +71,7 @@ const MODEL = {
   MESSAGE_QUEUE: "MessageQueue",
   MESSAGE_QUEUE_RECORD: "MessageQueueRecord",
   GAMIFICATION: "Gamification",
+  MANUAL_TOPUP: "ManualTopup",
 };
 
 const COLLECTION = {
@@ -141,6 +142,7 @@ const COLLECTION = {
   MESSAGE_QUEUE: "message_queue",
   MESSAGE_QUEUE_RECORD: "message_queue_record",
   GAMIFICATION: "gamification",
+  MANUAL_TOPUP: "manual_topup",
 };
 
 const TIMESTAMPS = {
