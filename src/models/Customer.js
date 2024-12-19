@@ -141,10 +141,6 @@ const SCHEMA = new Schema(
       type: Boolean,
       default: false,
     },
-    signup_topup: {
-      type: Boolean,
-      default: false
-    }
   },
   {
     collection: COLLECTION.CUSTOMER,
@@ -174,7 +170,6 @@ SCHEMA.static({
       referred_code,
       date_of_birth,
       gender,
-      signup_topup,
       profile_pic,
       country,
       language,
@@ -222,7 +217,6 @@ SCHEMA.static({
     serialized.updated_at = updated_at;
     serialized.twoFA_enabled = twoFA_enabled;
     serialized.channel = channel;
-    serialized.signup_topup = signup_topup;
     serialized.customer_type = customer_type;
     serialized.referral_code = referral_code;
     serialized.referred_code = referred_code;
@@ -242,7 +236,6 @@ SCHEMA.static({
       "default_language",
       "default_currency",
       "currency_type",
-      "signup_topup",
       "referral_code",
       "referred_code",
       "disable_nft",
