@@ -4,6 +4,11 @@ const QUEUE_STATUS = {
     COMPLETED: 'completed',
     STOPPED: 'stopped'
 }
+const WHATSAPP_STATUS = {
+    READ: 'read',
+    DELIVERED: 'delivered',
+    PENDING: 'pending',
+}
 const QUEUE_RECORD_STATUS = {
     VALID: 'pending',
     INVALID: 'invalid',
@@ -17,5 +22,6 @@ const QUEUE_TYPE = {
 module.exports = {
     QUEUE_STATUS,
     QUEUE_RECORD_STATUS,
-    QUEUE_TYPE
+    QUEUE_TYPE,
+    WHATSAPP_STATUS
 }

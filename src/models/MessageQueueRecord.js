@@ -11,6 +11,9 @@ const SCHEMA = new Schema(
             default: QUEUE_RECORD_STATUS.VALID,
             enum: Object.values(QUEUE_RECORD_STATUS)
         },
+        whatsapp_status :  {
+            type: String,
+        },
         queue_id: {
             type: Schema.Types.ObjectId,
             required: true,
