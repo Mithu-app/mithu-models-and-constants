@@ -66,3 +66,4 @@ exports.MessageQueue = require("./MessageQueue");
 exports.MessageQueueRecord = require("./MessageQueueRecord");
 exports.Gamification = require("./Gamification");
 exports.ManualTopup = require("./ManualTopup");
+exports.Pass = require("./Pass");
