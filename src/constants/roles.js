@@ -22,7 +22,7 @@ const PERSMISSIONS_TYPES = {
   PUSH_NOTIFICATION: "Push-Notification",
   SETTINGS_MANAGEMENT: "Settings-Management",
   CART_RULES_MANAGEMENT: "Cart-Rules-Management",
-  SUBCRIPTION_MANAGEMENT: "Subscription-Management",
+  SUBSCRIPTION_MANAGEMENT: "Subscription-Management",
 };
 
 const PERMISSION_ACTION_TYPES = {
