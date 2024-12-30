@@ -16,7 +16,7 @@ const SCHEMA = new Schema(
         benefits: [
             {
                 title: { type: String, required: true },
-                subTitle: { type: String, required: true }
+                sub_title: { type: String, required: true }
             }
         ],
         expiry_date: {
