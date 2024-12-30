@@ -45,4 +45,7 @@ module.exports = {
   ...require("./vendorDeviceSession"),
   ...require("./queue"),
   ...require("./gamification"),
+  ...require("./pass"),
+  ...require("./subscription"),
+
 };
