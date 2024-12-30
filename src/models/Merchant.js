@@ -258,6 +258,10 @@ const SCHEMA = new Schema(
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
     },
+    default_language: {
+      type: Schema.Types.ObjectId,
+      // default : //add function to make english as default
+    },
   },
   {
     collection: COLLECTION.MERCHANT,
@@ -310,6 +314,7 @@ SCHEMA.statics = {
       area_id,
       is_published,
       secret_key,
+      default_language,
       created_by,
       deleted_at,
     } = merchant;
@@ -351,6 +356,7 @@ SCHEMA.statics = {
       timeZone,
       operational_hours,
       secret_key,
+      default_language,
       created_by,
       deleted_at,
     };
@@ -394,6 +400,7 @@ SCHEMA.statics = {
       "operational_hours",
       "secret_key",
       "is_published",
+      "default_language",
       "created_by",
       "deleted_at",
     ];
