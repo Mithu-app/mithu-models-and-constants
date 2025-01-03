@@ -6,7 +6,7 @@ const {
   TIMESTAMPS,
   MERCHANT_STATUS,
   MERCHANT_TYPE,
-  ORDER_PLATFORM_TYPE
+  ORDER_PLATFORM_TYPE,
 } = require("../constants");
 const { emitEvent } = require("../../socket");
 
@@ -260,6 +260,7 @@ const SCHEMA = new Schema(
     },
     default_language: {
       type: Schema.Types.ObjectId,
+      ref: NAME.LANGUAGE,
       // default : //add function to make english as default
     },
   },

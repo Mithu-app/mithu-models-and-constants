@@ -19,6 +19,7 @@ const SCHEMA = new Schema(
     },
     default_language: {
       type: Schema.Types.ObjectId,
+      ref: NAME.LANGUAGE,
       // default : //add function to make english as default
     },
     default_currency: {
