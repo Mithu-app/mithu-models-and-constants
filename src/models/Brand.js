@@ -30,8 +30,8 @@ const SCHEMA = new Schema(
       },
       number: {
         type: String,
-        required: true
-      }
+        required: true,
+      },
     },
     unique_code: {
       type: String,
@@ -44,6 +44,10 @@ const SCHEMA = new Schema(
         message: (props) =>
           `${props.value} is not a valid unique code. It must be exactly 6 characters long.`,
       },
+    },
+    default_language: {
+      type: Schema.Types.ObjectId,
+      // default : //add function to make english as default
     },
     created_by: {
       type: Schema.Types.ObjectId,
@@ -78,7 +82,20 @@ SCHEMA.static({
    * @returns {Object}
    */
   serialize(brand) {
-    const { _id, name, email, domain, password, phone_number, unique_code, created_at, created_by, updated_at, updated_by } = brand;
+    const {
+      _id,
+      name,
+      email,
+      domain,
+      password,
+      phone_number,
+      unique_code,
+      default_language,
+      created_at,
+      created_by,
+      updated_at,
+      updated_by,
+    } = brand;
 
     const serialized = {
       id: _id,
@@ -88,6 +105,7 @@ SCHEMA.static({
       password,
       phone_number,
       unique_code,
+      default_language,
       created_at,
       created_by,
       updated_at,
@@ -103,7 +121,20 @@ SCHEMA.static({
    * @returns {string[]}
    */
   getSelectableFields() {
-    return ["id", "name", "domain", "email", "password", "phone_number", "unique_code", "created_at", "created_by", "updated_at", "updated_by"];
+    return [
+      "id",
+      "name",
+      "domain",
+      "email",
+      "password",
+      "phone_number",
+      "unique_code",
+      "default_language",
+      "created_at",
+      "created_by",
+      "updated_at",
+      "updated_by",
+    ];
   },
 });
 
