@@ -243,6 +243,10 @@ const SCHEMA = new Schema(
       type: Boolean,
       default: true,
     },
+    is_onboarded: {
+      type: Boolean,
+      default: true,
+    },
     created_by: {
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
@@ -318,6 +322,7 @@ SCHEMA.statics = {
       default_language,
       created_by,
       deleted_at,
+      is_onboarded
     } = merchant;
     return {
       id: _id,
@@ -360,6 +365,7 @@ SCHEMA.statics = {
       default_language,
       created_by,
       deleted_at,
+      is_onboarded
     };
   },
   getSelectableFields() {
@@ -404,6 +410,7 @@ SCHEMA.statics = {
       "default_language",
       "created_by",
       "deleted_at",
+      "is_onboarded",
     ];
   },
 };
