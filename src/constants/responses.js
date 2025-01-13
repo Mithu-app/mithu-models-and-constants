@@ -14,7 +14,8 @@ const RESPONSE_ACTION = {
   OTP_EXPIRED_OR_INVALID: "otpExpiredOrInvalid",
   SELECT_LANGUAGE_TO_UPDATE: "selectLanguageToUpdate",
   COULD_NOT_CREATE_TICKET: "couldNotCreateTicket",
-  COULD_NOT_UPLOAD_MANUAL_RECEIPT : 'couldNotUploadManualReceipt'
+  COULD_NOT_UPLOAD_MANUAL_RECEIPT : 'couldNotUploadManualReceipt',
+  MANUAL_RECEIPT_UPLOADED : 'manualReceiptUploaded'
 };
 const ARABIC_RESPONSES = {
   CUSTOMER_DELETED: "تم حذف العميل",
@@ -31,6 +32,7 @@ const ARABIC_RESPONSES = {
   SELECT_LANGUAGE_TO_UPDATE: "حدد اللغة للتحديث",
   COULD_NOT_CREATE_TICKET: "لا يمكن إنشاء تذكرة",
   COULD_NOT_UPLOAD_MANUAL_RECEIPT: "لم أتمكن من تحميل الإيصال اليدوي",
+  MANUAL_RECEIPT_UPLOADED : "تم تحميل الإيصال"
 };
 
 module.exports = {
