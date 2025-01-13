@@ -19,11 +19,6 @@ const SCHEMA = new Schema(
             type: String,
             required: true
         },
-        type: {
-            type: String,
-            enum: Object.values(MANUAL_RECEIPT_TYPE),
-            required: true
-        },
         customer_id: {
             type: Schema.Types.ObjectId,
             ref: NAME.CUSTOMER,
