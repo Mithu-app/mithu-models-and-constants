@@ -25,6 +25,7 @@ const S3_UPLOAD_FOLDER = {
   PRINTER_RECEIPT: "printer-receipt",
   SUBSCRIPTION: "subscription",
   PASS: "pass",
+  MANUAL_RECEIPT : "manual-receipt"
 };
 
 const S3_MAX_IMAGE_SIZE = 3 * 1024 * 1024 + 1; // 3 megabytes
