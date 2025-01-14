@@ -75,6 +75,8 @@ SCHEMA.static({
       order_amount,
       reason,
       created_by,
+      created_at,
+      updated_at,
     } = manualReceipt;
     return {
       id: _id,
@@ -86,6 +88,8 @@ SCHEMA.static({
       order_amount,
       reason,
       created_by,
+      created_at,
+      updated_at,
     };
   },
   getSelectableFields() {
@@ -99,6 +103,8 @@ SCHEMA.static({
       "order_amount",
       "reason",
       "created_by",
+      "created_at",
+      "updated_at",
     ];
   },
 });
