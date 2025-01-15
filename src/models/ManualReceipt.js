@@ -42,13 +42,13 @@ const SCHEMA = new Schema(
       type: String,
     },
     discount_amount: {
-        default: 0,
-        type: Number
+      default: 0,
+      type: Number,
     },
     unique_number: {
-        type: String,
-        unique: true,
-        required: true
+      type: String,
+      unique: true,
+      required: true,
     },
     created_by: {
       type: Schema.Types.ObjectId,
@@ -72,6 +72,70 @@ const SCHEMA = new Schema(
   }
 );
 
+SCHEMA.static({
+  serialize(manualReceipt) {
+    const {
+      _id,
+      merchant_id,
+      image,
+      date,
+      customer_id,
+      status,
+      order_amount,
+      discount_amount,
+      unique_number,
+      reason,
+      created_by,
+      created_at,
+      updated_at,
+    } = manualReceipt;
+    return {
+      id: _id,
+      merchant_id,
+      image,
+      date,
+      customer_id,
+      status,
+      order_amount,
+      discount_amount,
+      unique_number,
+      reason,
+      created_by,
+      created_at,
+      updated_at,
+    };
+  },
+  getSelectableFields() {
+    return [
+      "_id",
+      "merchant_id",
+      "image",
+      "date",
+      "customer_id",
+      "status",
+      "order_amount",
+      "discount_amount",
+      "unique_number",
+      "reason",
+      "created_by",
+      "created_at",
+      "updated_at",
+    ];
+  },
+});
+
+SCHEMA.method({
+  serialize() {
+    return this.constructor.serialize(this);
+  },
+});
+
+SCHEMA.set("toJSON", {
+  transform(doc) {
+    return doc.serialize();
+  },
+});
+
 const MODEL = model(NAME.MANUAL_RECEIPT, SCHEMA);
 
-module.exports = MODEL
+module.exports = MODEL;
