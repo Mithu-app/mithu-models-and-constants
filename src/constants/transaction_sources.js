@@ -18,7 +18,8 @@ const TRANSACTION_SOURCE_NAME = {
   VENDOR_TOPUP: "points through vendor topup",
   SIGNUP_TOPUP_POINTS: "signup topup points",
   POINTS_THROUGH_GAMIFICATION: "points through gamification",
-  MANUAL_TOPUP_POINTS : "manual topup points"
+  MANUAL_TOPUP_POINTS: "manual topup points",
+  MANUAL_RECEIPT_POINTS: "manual receipt points",
 };
 const TRANSACTION_TYPE = {
   NETWORK: "network",
