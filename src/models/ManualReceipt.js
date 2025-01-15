@@ -36,6 +36,15 @@ const SCHEMA = new Schema(
         reason: {
             type: String
         },
+        discount_amount: {
+            default: 0,
+            type: Number
+        },
+        unique_number: {
+            type: String,
+            unique: true,
+            required: true
+        },
         updated_by: {
             type: Schema.Types.ObjectId,
             ref: NAME.USER
