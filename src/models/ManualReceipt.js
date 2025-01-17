@@ -37,6 +37,7 @@ const SCHEMA = new Schema(
     },
     order_amount: {
       type: Number,
+      default : 0
     },
     reason: {
       type: String,
