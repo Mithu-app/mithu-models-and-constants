@@ -213,6 +213,9 @@ const SCHEMA = new Schema(
     network_cashback_percentage: {
       type: Number,
     },
+    network_reward_points: {
+      type: Number,
+    },
     reward_points: {
       type: Number,
       required: true,
@@ -301,6 +304,7 @@ SCHEMA.statics = {
       minimum_redeem_points,
       cashback_percent,
       network_cashback_percentage,
+      network_reward_points,
       reward_points,
       logo,
       cover_image,
@@ -344,6 +348,7 @@ SCHEMA.statics = {
       minimum_redeem_points,
       cashback_percent,
       network_cashback_percentage,
+      network_reward_points,
       reward_points,
       logo,
       cover_image,
@@ -389,6 +394,7 @@ SCHEMA.statics = {
       "minimum_redeem_points",
       "cashback_percent",
       "network_cashback_percentage",
+      "network_reward_points",
       "reward_points",
       "logo",
       "country_id",
