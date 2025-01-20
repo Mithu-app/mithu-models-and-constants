@@ -220,6 +220,9 @@ const SCHEMA = new Schema(
       type: Number,
       required: true,
     },
+    commission_rate: {
+      type: Number,
+    },
     merchant_tag_ids: [
       {
         type: Schema.Types.ObjectId,
@@ -306,6 +309,7 @@ SCHEMA.statics = {
       network_cashback_percentage,
       network_reward_points,
       reward_points,
+      commission_rate,
       logo,
       cover_image,
       listing_image,
@@ -326,7 +330,7 @@ SCHEMA.statics = {
       default_language,
       created_by,
       deleted_at,
-      is_onboarded
+      is_onboarded,
     } = merchant;
     return {
       id: _id,
@@ -350,6 +354,7 @@ SCHEMA.statics = {
       network_cashback_percentage,
       network_reward_points,
       reward_points,
+      commission_rate,
       logo,
       cover_image,
       listing_image,
@@ -370,7 +375,7 @@ SCHEMA.statics = {
       default_language,
       created_by,
       deleted_at,
-      is_onboarded
+      is_onboarded,
     };
   },
   getSelectableFields() {
@@ -396,6 +401,7 @@ SCHEMA.statics = {
       "network_cashback_percentage",
       "network_reward_points",
       "reward_points",
+      "commission_rate",
       "logo",
       "country_id",
       "state_id",
