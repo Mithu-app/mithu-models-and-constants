@@ -5,7 +5,7 @@ const ORDER_PLATFORM_TYPE = {
   VENDOR_NON_INTEGRATED: "vendor_non_integrated",
   MITHU_CASHIER_APP : "mithu_cashier_app",
   PRINTER : "printer",
-  DEFAULT : ""
+  DEFAULT : "default"
 
 };
 const ORDER_STATUS = {
