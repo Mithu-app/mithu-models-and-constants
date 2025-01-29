@@ -28,6 +28,9 @@ const SCHEMA = new Schema(
     short_description: {
       type: String,
     },
+    qr_code: {
+      type: String,
+    },
     address: {
       type: String,
       required: true,
@@ -292,6 +295,7 @@ SCHEMA.statics = {
       name,
       brand_id,
       address,
+      qr_code,
       short_description,
       facilities,
       platform,
@@ -337,6 +341,7 @@ SCHEMA.statics = {
       name,
       brand_id,
       address,
+      qr_code,
       platform,
       short_description,
       facilities,
@@ -384,6 +389,7 @@ SCHEMA.statics = {
       "name",
       "brand_id",
       "address",
+      "qr_code",
       "platform",
       "short_description",
       "facilities",
