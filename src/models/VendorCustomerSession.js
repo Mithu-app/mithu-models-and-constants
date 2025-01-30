@@ -18,11 +18,15 @@ const SCHEMA = new Schema(
         status: {
             type: String,
             enum: Object.values(VENDOR_CUSTOMER_SESSION_STATUS),
-            default : VENDOR_CUSTOMER_SESSION_STATUS.ACTIVE
+            default: VENDOR_CUSTOMER_SESSION_STATUS.ACTIVE
         },
         allow_redeem: {
             type: Boolean,
-            default : false
+            default: false
+        },
+        amount: {
+            type: Number,
+            required: false,
         },
         deleted_at: {
             type: Date
@@ -45,12 +49,13 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(vendor_customer_session) {
-        const { id, device_id, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
+        const { id, device_id,amount, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
 
         const serialized = {
             id,
             device_id,
             customer_id,
+            amount,
             status,
             allow_redeem,
             created_at,
