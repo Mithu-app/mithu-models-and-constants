@@ -15,6 +15,10 @@ const SCHEMA = new Schema(
             type: Schema.Types.ObjectId,
             ref: NAME.DEVICE
         },
+        merchant_id: {
+            type: Schema.Types.ObjectId,
+            ref: NAME.MERCHANT
+        },
         status: {
             type: String,
             enum: Object.values(VENDOR_CUSTOMER_SESSION_STATUS),
@@ -30,7 +34,7 @@ const SCHEMA = new Schema(
         },
         deleted_at: {
             type: Date
-        }
+        },
     },
     {
         collection: COLLECTION.VENDOR_CUSTOMER_SESSION,
@@ -49,11 +53,12 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(vendor_customer_session) {
-        const { id, device_id,amount, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
+        const { id, merchant_id,device_id,amount, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
 
         const serialized = {
             id,
             device_id,
+            merchant_id,
             customer_id,
             amount,
             status,
