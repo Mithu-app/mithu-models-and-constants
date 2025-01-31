@@ -28,6 +28,10 @@ const SCHEMA = new Schema(
             type: Boolean,
             default: false
         },
+        exipres_at:{
+            type: Date,
+            required: false,
+        },
         amount: {
             type: Number,
             required: false,
@@ -53,7 +57,7 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(vendor_customer_session) {
-        const { id, merchant_id,device_id,amount, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
+        const { id, merchant_id,device_id,amount,exipres_at, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
 
         const serialized = {
             id,
@@ -61,6 +65,7 @@ SCHEMA.static({
             merchant_id,
             customer_id,
             amount,
+            exipres_at,
             status,
             allow_redeem,
             created_at,
