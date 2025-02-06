@@ -20,6 +20,10 @@ const SCHEMA = new Schema(
       type: String,
       required: true,
     },
+    symbol: {
+      type: String,
+      required: true,
+    },
     type: {
       type: String,
       enum: Object.values(CURRENCY_KIND),
@@ -68,6 +72,7 @@ SCHEMA.static({
       code,
       name,
       type,
+      symbol,
       point_rate,
       created_at,
       created_by,
@@ -79,6 +84,7 @@ SCHEMA.static({
     };
 
     serialized.name = name;
+    serialized.symbol = symbol;
     serialized.code = code;
     serialized.type = type;
     serialized.point_rate = point_rate;
@@ -99,6 +105,7 @@ SCHEMA.static({
       "id",
       "code",
       "name",
+      "symbol",
       "type",
       "point_rate",
       "created_at",

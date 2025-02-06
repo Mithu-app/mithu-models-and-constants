@@ -55,6 +55,9 @@ const SCHEMA = new Schema(
     platform_id: {
       type: String,
     },
+    currency: {
+      type: String,
+    },
     created_by: {
       type: Schema.Types.ObjectId,
       ref: NAME.USER,
@@ -89,6 +92,7 @@ SCHEMA.statics = {
       order_number,
       merchant_id,
       status,
+      currency,
       discount_amount,
       customer_id,
       amount,
@@ -107,6 +111,7 @@ SCHEMA.statics = {
       order_number,
       merchant_id,
       status,
+      currency,
       customer_id,
       platform_type,
       platform_id,
@@ -130,6 +135,7 @@ SCHEMA.statics = {
       "status",
       "amount",
       "discount_amount",
+      "currency",
       "platform_type",
       "platform_id",
       "createdAt",
