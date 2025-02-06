@@ -13,6 +13,10 @@ const SCHEMA = new Schema(
       type: String,
       required: true,
     },
+    currency: {
+      type: String,
+      required: true,
+    },
     password: {
       type: String,
       required: true,
@@ -58,12 +62,13 @@ SCHEMA.index({ "phone_number.code": 1, "phone_number.number": 1 }, { unique: tru
 
 SCHEMA.statics = {
   serialize(user) {
-    const { _id, name, email, password, phone_number, roles, created_by } = user;
+    const { _id, name, email, password,currency, phone_number, roles, created_by } = user;
     return {
       id: _id,
       name,
       email,
       phone_number,
+      currency,
       roles,
       password,
       created_by,
@@ -75,6 +80,7 @@ SCHEMA.statics = {
       "name",
       "email",
       "phone_number",
+      "currency",
       "roles",
       "password",
       "created_by",
