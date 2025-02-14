@@ -1,6 +1,6 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION, TIMESTAMPS } = require("../constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS, MANUAL_TOPUP_TYPE } = require("../constants");
 const { Schema, model } = require("mongoose");
 const { emitEvent } = require("../../socket");
 
@@ -22,6 +22,16 @@ const SCHEMA = new Schema(
     },
     comment: {
       type: String,
+    },
+    type: {
+      type: String,
+      enum: Object.values(MANUAL_TOPUP_TYPE),
+      default: MANUAL_TOPUP_TYPE.NETWORK
+    },
+    merchant_id: {
+      type: String,
+      required: true,
+      ref: NAME.MERCHANT,
     },
     created_by: {
       type: Schema.Types.ObjectId,
