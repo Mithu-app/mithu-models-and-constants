@@ -7,7 +7,7 @@ const { emitEvent } = require("../../socket");
 const SCHEMA = new Schema(
   {
     topup_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
       required: true,
       unique: true,
       ref: NAME.TOPUP,
@@ -29,7 +29,7 @@ const SCHEMA = new Schema(
       default: MANUAL_TOPUP_TYPE.NETWORK
     },
     merchant_id: {
-      type: String,
+      type: Schema.Types.ObjectId,
       required: true,
       ref: NAME.MERCHANT,
     },
