@@ -68,3 +68,4 @@ exports.Gamification = require("./Gamification");
 exports.ManualTopup = require("./ManualTopup");
 exports.Pass = require("./Pass");
 exports.ManualReceipt = require("./ManualReceipt");
+exports.MerchantQrCode = require("./MerchantQrCode");
