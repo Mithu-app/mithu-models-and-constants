@@ -72,8 +72,9 @@ const MODEL = {
   MESSAGE_QUEUE_RECORD: "MessageQueueRecord",
   GAMIFICATION: "Gamification",
   MANUAL_TOPUP: "ManualTopup",
-  PASS : "Pass",
-  MANUAL_RECEIPT : "ManualReceipt"
+  PASS: "Pass",
+  MANUAL_RECEIPT: "ManualReceipt",
+  MERCHANT_QR_CODE: "MerchantQrCode",
 };
 
 const COLLECTION = {
@@ -145,8 +146,9 @@ const COLLECTION = {
   MESSAGE_QUEUE_RECORD: "message_queue_record",
   GAMIFICATION: "gamification",
   MANUAL_TOPUP: "manual_topup",
-  PASS : "pass",
-  MANUAL_RECEIPT : "manual_receipt"
+  PASS: "pass",
+  MANUAL_RECEIPT: "manual_receipt",
+  MERCHANT_QR_CODE: "merchant_qr_code",
 };
 
 const TIMESTAMPS = {
