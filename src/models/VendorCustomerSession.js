@@ -36,6 +36,15 @@ const SCHEMA = new Schema(
             type: Number,
             required: false,
         },
+        reason: {
+            type: String,
+            required: false,
+        },
+        requested_number: {
+            type: String, // 8 alphaNum
+            required: false,
+            unique : true
+        },
         deleted_at: {
             type: Date
         },
@@ -57,7 +66,7 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(vendor_customer_session) {
-        const { id, merchant_id,device_id,amount,exipres_at, customer_id, status, allow_redeem, created_at, updated_at } = vendor_customer_session;
+        const { id, merchant_id,device_id,amount,exipres_at, customer_id, status, allow_redeem,requested_number,reason, created_at, updated_at } = vendor_customer_session;
 
         const serialized = {
             id,
@@ -68,6 +77,8 @@ SCHEMA.static({
             exipres_at,
             status,
             allow_redeem,
+            requested_number,
+            reason,
             created_at,
             updated_at,
 
