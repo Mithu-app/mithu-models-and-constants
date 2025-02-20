@@ -25,6 +25,9 @@ const SCHEMA = new Schema(
     facilities: {
       type: [],
     },
+    categories: {
+      type: [],
+    },
     short_description: {
       type: String,
     },
