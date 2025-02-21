@@ -60,10 +60,10 @@ const SCHEMA = new Schema(
     currency: {
       type: String,
     },
-    // category_id: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: NAME.CATEGORY,
-    // },
+    category_id: {
+      type: Schema.Types.ObjectId,
+      ref: NAME.CATEGORY,
+    },
     merchant_type_ids: [
       {
         type: Schema.Types.ObjectId,
@@ -307,7 +307,7 @@ SCHEMA.statics = {
       description,
       delivery_time,
       currency,
-      // category_id,
+      category_id,
       merchant_type_ids,
       cuisine_type_ids,
       unique_code,
@@ -354,7 +354,7 @@ SCHEMA.statics = {
       description,
       delivery_time,
       currency,
-      // category_id,
+      category_id,
       merchant_type_ids,
       cuisine_type_ids,
       unique_code,
