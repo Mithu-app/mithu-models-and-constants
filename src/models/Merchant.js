@@ -221,6 +221,7 @@ const SCHEMA = new Schema(
     },
     tax_percentage: {
       type: Number,
+      default : 0
     },
     network_reward_points: {
       type: Number,
