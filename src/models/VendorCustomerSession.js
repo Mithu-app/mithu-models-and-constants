@@ -36,6 +36,10 @@ const SCHEMA = new Schema(
             type: Number,
             required: false,
         },
+        coin_amount: {
+            type: Number,
+            required: false,
+        },
         reason: {
             type: String,
             required: false,
@@ -66,7 +70,7 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(vendor_customer_session) {
-        const { id, merchant_id,device_id,amount,exipres_at, customer_id, status, allow_redeem,requested_number,reason, created_at, updated_at } = vendor_customer_session;
+        const { id, merchant_id,device_id,amount,coin_amount,exipres_at, customer_id, status, allow_redeem,requested_number,reason, created_at, updated_at } = vendor_customer_session;
 
         const serialized = {
             id,
@@ -75,6 +79,7 @@ SCHEMA.static({
             customer_id,
             amount,
             exipres_at,
+            coin_amount,
             status,
             allow_redeem,
             requested_number,
