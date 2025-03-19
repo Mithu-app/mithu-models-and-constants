@@ -9,6 +9,12 @@ const SCHEMA = new Schema(
             type: String,
             required: true
         },
+        country: {
+            type: String,
+            required: true,
+            default : "all",
+            ref: NAME.COUNTRY
+        },
         image: {
             type: String,
             required: true
@@ -69,7 +75,7 @@ const SCHEMA = new Schema(
 
 SCHEMA.statics = {
     serialize(slider) {
-        const { _id, title, image, status,type,entity_type,entity_id, startDate, endDate, action_url, merchant, created_by } = slider;
+        const { _id, title, image, status,type,entity_type,entity_id,country, startDate, endDate, action_url, merchant, created_by } = slider;
         return {
             id: _id,
             title,
@@ -79,6 +85,7 @@ SCHEMA.statics = {
             entity_id,
             status,
             startDate,
+            country,
             endDate,
             action_url,
             merchant,
@@ -94,6 +101,7 @@ SCHEMA.statics = {
             "entity_type",
             "entity_id",
             "status",
+            "country",
             "startDate",
             "endDate",
             "action_url",
