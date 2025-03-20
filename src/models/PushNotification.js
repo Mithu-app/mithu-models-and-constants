@@ -34,6 +34,11 @@ const SCHEMA = new Schema(
         {
             type: [Schema.Types.Mixed]
         },
+        country_id: {
+            type: Schema.Types.ObjectId,
+            default : null,
+            ref: NAME.COUNTRY
+        },
         created_by: {
             type: Schema.Types.ObjectId,
             ref: NAME.USER
@@ -67,13 +72,14 @@ SCHEMA.static({
      * @returns {Object}
      */
     serialize(cartRule) {
-        const { _id, title, body, platform,firebase_log, language_id, created_at, created_by, updated_at } = cartRule;
+        const { _id, title, body, platform,firebase_log, country_id, language_id, created_at, created_by, updated_at } = cartRule;
 
         const serialized = {
             id: _id,
             title,
             body,
             firebase_log,
+            country_id,
             platform,
             language_id,
             created_at,
@@ -96,6 +102,7 @@ SCHEMA.static({
             "body",
             "firebase_log",
             "platform",
+            "country_id",
             "language_id",
             "created_at",
             "created_by",
