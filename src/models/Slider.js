@@ -25,7 +25,6 @@ const SCHEMA = new Schema(
         },
         entity_type: {
             type: String, 
-            enum: Object.values(NAME),
             default: null
         },
         status: {
