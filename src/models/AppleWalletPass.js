@@ -4,6 +4,7 @@ const {
     MODEL: NAME,
     COLLECTION,
     TIMESTAMPS,
+    PASS_TYPES
 } = require("../constants");
 const { Schema, model } = require("mongoose");
 
@@ -13,6 +14,12 @@ const SCHEMA = new Schema(
             type: Schema.Types.ObjectId,
             ref: NAME.CUSTOMER,
             required: true,
+        },
+        type : {
+            enum : Object.values(PASS_TYPES),
+            type : String,
+            default : PASS_TYPES.MITHU_LOYALTY_PASS,
+            required : true,
         },
         serial_number: {
             type: String,
