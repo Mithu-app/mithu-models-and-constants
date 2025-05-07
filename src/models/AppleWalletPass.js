@@ -40,12 +40,8 @@ const SCHEMA = new Schema(
         encryption_public_key: {
             type: String,
         },
-        pass_metadata: {
-            name: { type: String },
-            points: { type: Number },
-            order_count: { type: Number },
-            reward_boost: { type: String },
-            member_since: { type: String },
+        webservice_url: {
+            type: String,
         },
         is_active: {
             type: Boolean,
@@ -74,7 +70,7 @@ SCHEMA.statics = {
             push_token,
             authentication_token,
             encryption_public_key,
-            pass_metadata,
+            webservice_url,
             is_active,
             last_updated_from_server,
             created_at,
@@ -90,7 +86,7 @@ SCHEMA.statics = {
             push_token,
             authentication_token,
             encryption_public_key,
-            pass_metadata,
+            webservice_url,
             is_active,
             last_updated_from_server,
             created_at,
@@ -108,7 +104,7 @@ SCHEMA.statics = {
             "push_token",
             "authentication_token",
             "encryption_public_key",
-            "pass_metadata",
+            "webservice_url",
             "is_active",
             "last_updated_from_server",
             "created_at",
