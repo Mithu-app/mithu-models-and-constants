@@ -75,6 +75,7 @@ const MODEL = {
   PASS: "Pass",
   MANUAL_RECEIPT: "ManualReceipt",
   MERCHANT_QR_CODE: "MerchantQrCode",
+  APPLE_WALLET_PASS : "AppleWalletPass",
 };
 
 const COLLECTION = {
@@ -149,6 +150,7 @@ const COLLECTION = {
   PASS: "pass",
   MANUAL_RECEIPT: "manual_receipt",
   MERCHANT_QR_CODE: "merchant_qr_code",
+  APPLE_WALLET_PASS: "apple_wallet_pass",
 };
 
 const TIMESTAMPS = {
