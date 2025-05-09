@@ -52,6 +52,9 @@ const SCHEMA = new Schema(
     name: {
       type: String,
     },
+    apple_pass_push_token: {
+      type: String,
+    },
     profile_pic: {
       type: String,
     },
@@ -164,6 +167,7 @@ SCHEMA.static({
       default_currency,
       acquisition,
       currency_type,
+      apple_pass_push_token,
       disable_nft,
       disable_earning,
       disable_redemption,
@@ -226,6 +230,7 @@ SCHEMA.static({
     serialized.disable_redemption = disable_redemption;
     serialized.is_earned_gaming_points = is_earned_gaming_points;
     serialized.deleted_at = deleted_at;
+    serialized.apple_pass_push_token = apple_pass_push_token;
 
     return serialized;
   },
@@ -247,6 +252,7 @@ SCHEMA.static({
       "gender",
       "profile_pic",
       "device_token",
+      "apple_pass_push_token",
       "quantity",
       "country_code",
       "language",
