@@ -6,7 +6,7 @@ const {
     TIMESTAMPS,
     PASS_TYPES
 } = require("../constants");
-const { Schema, model } = require("mongoose");
+const { Schema, model, deleteModel } = require("mongoose");
 
 const SCHEMA = new Schema(
     {
@@ -15,11 +15,11 @@ const SCHEMA = new Schema(
             ref: NAME.CUSTOMER,
             required: true,
         },
-        type : {
-            enum : Object.values(PASS_TYPES),
-            type : String,
-            default : PASS_TYPES.MITHU_LOYALTY_PASS,
-            required : true,
+        type: {
+            enum: Object.values(PASS_TYPES),
+            type: String,
+            default: PASS_TYPES.MITHU_LOYALTY_PASS,
+            required: true,
         },
         serial_number: {
             type: String,
@@ -57,6 +57,17 @@ const SCHEMA = new Schema(
         last_updated_from_server: {
             type: Date,
         },
+        is_registered: { // if registered in apple wallet then this will be true
+            type: Boolean,
+            default: false,
+        },
+        is_deleted: { // if removes by customer from apple wallet then this will be true
+            type: Boolean,
+            default: false,
+        },
+        deleted_at: { // time when user removes the pass from apple wallet
+            type: Date,
+        },
     },
     {
         collection: COLLECTION.APPLE_WALLET_PASS,
@@ -80,6 +91,9 @@ SCHEMA.statics = {
             webservice_url,
             is_active,
             last_updated_from_server,
+            is_registered,
+            is_deleted,
+            deleted_at,
             created_at,
             updated_at,
         } = pass;
@@ -96,6 +110,9 @@ SCHEMA.statics = {
             webservice_url,
             is_active,
             last_updated_from_server,
+            is_registered,
+            is_deleted,
+            deleted_at,
             created_at,
             updated_at,
         };
@@ -115,6 +132,9 @@ SCHEMA.statics = {
             "is_active",
             "last_updated_from_server",
             "created_at",
+            "is_registered",
+            "is_deleted",
+            "deleted_at",
             "updated_at",
         ];
     },
