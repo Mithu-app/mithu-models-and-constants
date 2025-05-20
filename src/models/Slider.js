@@ -25,7 +25,8 @@ const SCHEMA = new Schema(
         },
         entity_type: {
             type: String, 
-            default: null
+            default: null,
+            enum : SLIDER_ENTITY_TYPES
         },
         status: {
             type: String,
