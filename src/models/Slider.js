@@ -1,6 +1,6 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION, TIMESTAMPS ,SLIDER_STATUS, SLIDER_TYPE} = require("../constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS, SLIDER_STATUS, SLIDER_TYPE, SLIDER_ENTITY_TYPES } = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(
@@ -11,22 +11,22 @@ const SCHEMA = new Schema(
         },
         country_id: {
             type: Schema.Types.ObjectId,
-            default : null,
+            default: null,
             ref: NAME.COUNTRY
         },
         image: {
             type: String,
             required: true
         },
-        type: { 
+        type: {
             type: String,
-            required: true, 
+            required: true,
             enum: Object.values(SLIDER_TYPE)
         },
         entity_type: {
-            type: String, 
+            type: String,
             default: null,
-            enum : SLIDER_ENTITY_TYPES
+            enum: SLIDER_ENTITY_TYPES
         },
         status: {
             type: String,
@@ -51,19 +51,19 @@ const SCHEMA = new Schema(
             default: null
         },
         created_by: {
-            type : Schema.Types.ObjectId,
-            ref : NAME.USER
+            type: Schema.Types.ObjectId,
+            ref: NAME.USER
         },
         updated_by: {
-            type : Schema.Types.ObjectId,
-            ref : NAME.USER
+            type: Schema.Types.ObjectId,
+            ref: NAME.USER
         },
         deleted_at: {
             type: Date
         },
         deleted_by: {
-            type : Schema.Types.ObjectId,
-            ref : NAME.USER
+            type: Schema.Types.ObjectId,
+            ref: NAME.USER
         }
     },
     {
@@ -74,7 +74,7 @@ const SCHEMA = new Schema(
 
 SCHEMA.statics = {
     serialize(slider) {
-        const { _id, title, image, status,type,entity_type,entity_id,country_id, startDate, endDate, action_url, merchant, created_by } = slider;
+        const { _id, title, image, status, type, entity_type, entity_id, country_id, startDate, endDate, action_url, merchant, created_by } = slider;
         return {
             id: _id,
             title,
