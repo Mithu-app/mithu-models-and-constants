@@ -79,7 +79,7 @@ const SCHEMA = new Schema(
 
 SCHEMA.statics = {
     serialize(slider) {
-        const { _id, title, image, status, type, entity_type, entity_id, country_id, startDate, endDate, action_url, merchant, created_by } = slider;
+        const { _id, title, image, status, type,mobile_type, entity_type, entity_id, country_id, startDate, endDate, action_url, merchant, created_by } = slider;
         return {
             id: _id,
             title,
