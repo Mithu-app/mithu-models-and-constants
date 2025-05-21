@@ -28,7 +28,7 @@ const BRAND = "Mithu";
 const MOBILE_TYPE = {
   ANDROID: 'android',
   IOS: 'ios',
-  BOTH : "both"
+  BOTH : 'both'
 };
 
 module.exports = {
