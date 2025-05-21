@@ -1,6 +1,6 @@
 "use strict";
 
-const { MODEL: NAME, COLLECTION, TIMESTAMPS, SLIDER_STATUS, SLIDER_TYPE, SLIDER_ENTITY_TYPES } = require("../constants");
+const { MODEL: NAME, COLLECTION, TIMESTAMPS, SLIDER_STATUS, SLIDER_TYPE, SLIDER_ENTITY_TYPES, MOBILE_TYPE } = require("../constants");
 const { Schema, model } = require("mongoose");
 
 const SCHEMA = new Schema(
@@ -40,6 +40,11 @@ const SCHEMA = new Schema(
         endDate: {
             type: Date,
             default: null
+        },
+        mobile_type: {
+            type: String,
+            enum: Object.values(MOBILE_TYPE),
+            default: MOBILE_TYPE.BOTH
         },
         action_url: {
             type: String,
@@ -83,6 +88,7 @@ SCHEMA.statics = {
             entity_type,
             entity_id,
             status,
+            mobile_type,
             startDate,
             country_id,
             endDate,
@@ -100,6 +106,7 @@ SCHEMA.statics = {
             "entity_type",
             "entity_id",
             "status",
+            "mobile_type",
             "country_id",
             "startDate",
             "endDate",

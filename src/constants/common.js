@@ -25,9 +25,16 @@ const DAYS = {
 
 const BRAND = "Mithu";
 
+const MOBILE_TYPE = {
+  ANDROID: 'android',
+  IOS: 'ios',
+  BOTH : "both"
+};
+
 module.exports = {
   ENV,
   RELEASE,
   BRAND,
   DAYS,
+  MOBILE_TYPE
 };
