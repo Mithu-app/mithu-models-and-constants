@@ -47,6 +47,7 @@ module.exports = {
   ...require("./gamification"),
   ...require("./pass"),
   ...require("./subscription"),
-  ...require("./manualReceipt")
+  ...require("./manualReceipt"),
+  ...require("./campaign")
 
 };
