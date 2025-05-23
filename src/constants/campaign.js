@@ -11,10 +11,10 @@ const CAMPAIGN_STATUS = {
 };
 
 const TASK_TYPE = {
-  UPLOAD_IMAGE: "upload_image",  //  picture (like Bakra Eid goat)
+  UPLOAD_IMAGE: "upload image",  //  picture (like Bakra Eid goat)
   QUIZ: "quiz",                  //  for rewards
   POLL: "poll",                  //  poll
-  CHECK_IN: "check_in",          //  during a time period
+  CHECK_IN: "check in",          //  during a time period
 };
 
 const REWARD_TYPE = {
