@@ -70,4 +70,5 @@ exports.Pass = require("./Pass");
 exports.ManualReceipt = require("./ManualReceipt");
 exports.MerchantQrCode = require("./MerchantQrCode");
 exports.AppleWalletPass = require("./AppleWalletPass");
+exports.GoogleWalletPass = require("./GoogleWalletPass");
 exports.Campaign = require("./Campaign");
