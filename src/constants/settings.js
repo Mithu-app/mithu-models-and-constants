@@ -10,7 +10,8 @@ const SETTINGS_KEYS = {
   IN_ACTIVE_VENDOR_DEVICES_ALERT_EMAILS: "in_active_vendor_devices_alert_emails",
   SIGNUP_TOPUP_POINTS: "signup_topup_points",
   SIGNUP_TOPUP_TO_USERS: "signup_topup_to_users",
-  STOP_WHATSAPP_OTP_SERVICE: "stop_whatsapp_otp_service" 
+  STOP_WHATSAPP_OTP_SERVICE: "stop_whatsapp_otp_service",
+  GOOGLE_WALLET_CLASS_ID : "google_wallet_class_id",
 };
 
 module.exports = {
